@@ -1,0 +1,215 @@
+.background-container {
+    /* background-image: url('../assets/bg-2.jpg'); */
+  background-image: var(--background-gradient);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+}
+
+
+.page {
+    margin: max(20px, 2vw) max(50px, 5vw);
+    padding: max(20px, 2vw);
+    background-color: var(--white-low-opacity);
+    border: 2px solid var(--white-high-opacity);
+    border-radius: max(10px, 1vw);
+    overflow: hidden;
+}
+
+.page-header {
+    position: relative;
+    padding: max(10px, 1vw) max(50px, 5vw);
+    margin: min(-20px, -2vw);
+    background-color: var(--white-middle-opacity);
+    margin-bottom: max(50px, 5vw);
+
+}
+
+.page-header > header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: max(10px, 1vw);
+    margin-bottom: max(20px, 2vw);
+
+}
+
+.hamburger-menu {
+    display: none;
+    color: aliceblue;
+}
+
+
+.page-header .header-logo {
+    width: max(30px, 3vw);
+    height: max(30px, 3vw);
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.page-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.page-header .header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: max(20px, 2vw);
+}
+
+.header-nav a {
+    text-decoration: none;
+    padding: max(5px, 0.5vw) max(10px, 1vw);
+    border-radius: max(5px, 0.5vw);
+    color: #000;
+    font-weight: 500;
+    /* border: 1px solid; */
+    box-shadow: 0 0 6px #243b55;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+    background: var(--primary-color);
+    color: var(--white-high-opacity);
+}
+
+
+.header-contact > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: max(5px, .5vw);
+    color: var(--secondary-color);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.header-profile {
+    display: grid;
+    grid-template-columns: 1fr  max(200px, 20vw);
+    gap: max(20px, 2vw);
+
+}
+
+.let-me-introduce-myself h1 {
+    color: rgba(0, 12, 33, 0.918);
+    text-shadow: 0 0 2px var(--secondary-color);
+
+}
+
+.let-me-introduce-myself > p {
+    margin: max(20px, 2vw) 0;
+    width: 70%;
+    text-shadow: 0 0 1px var(--secondary-color);
+}
+
+.experience-part {
+    display: flex;
+    align-items: center;
+    gap: max(10px, 1vw);
+    margin-top: max(100px, 10vw);
+    /* margin-top: auto; */
+}
+
+.experience-part p {
+    font-size: max(10px, .8vw);
+}
+
+.page-content {
+    display: flex;
+    flex-direction: column;
+    gap: max(30px, 3vw);
+}
+
+footer p {
+    text-align: center;
+    font-size: max(10px, 1vw);
+    margin-top: max(20px, 2vw);
+}
+
+
+
+@media (max-width: 942px) {
+    .header-contact {
+        display: none;
+    }
+}
+
+@media (max-width: 748px) {
+
+    .header-profile {
+        display: block;
+    }
+
+    .header-profile-img {
+        width: 150px;
+        margin-left: auto;
+    }
+
+    .experience-part {
+        margin-top: 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+
+    .page-header .header-nav {
+        display: none;
+    }
+
+    .page-header .header-nav.nav-tabs-open{
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: max(10px, 1vw);
+        right: max(50px, 5vw);
+        top: max(60px, 6vw);
+
+    }
+
+    .hello-section > h1 {
+        font-size: max(18px, 1.5vw);
+        width: 70%;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .page {
+        margin: max(20px, 2vw);
+
+    }
+
+    .page-header {
+        padding: max(10px, 1vw) max(20px, 2vw);
+
+    }
+
+    .let-me-introduce-myself p {
+        width: 70%;
+    }
+
+    .header-profile-img {
+        margin: 0 auto;
+        margin-top: max(20px, 2vw);
+    }
+
+    .page-header .header-nav.nav-tabs-open{
+        right: max(20px, 2vw);
+    }
+}

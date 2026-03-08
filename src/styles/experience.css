@@ -1,0 +1,128 @@
+.experience-container{
+    background-color: var(--white-middle-opacity);
+    padding: max(20px, 2vw);
+    border-radius: max(10px, 1vw);
+}
+
+.experience-item-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: max(14px, 1.4vw);
+    margin-top: max(20px, 2vw);
+}
+
+.left-part > div,
+.next-dot-part > div 
+{
+    display: flex;
+    align-items: center;
+    gap: max(10px, 1vw);
+    color: var(--secondary-color);
+    margin-bottom: max(10px, 1vw);
+
+}
+
+.left-part > .skills-wrapper {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: max(8px, .5vw);
+    margin-top: max(10px, 1vw);
+    background-color: var(--white-middle-opacity);
+    box-shadow: 0 0 max(2px, .2vw) var(--secondary-color);
+    padding: max(10px, 1vw);
+    border-radius: max(5px, .5vw);
+}
+
+.skills-wrapper > span {
+    padding: max(2px, .2vw) max(10px, 1vw);
+    border-radius: max(10px, 1vw);
+    font-size: max(10px, .8vw);
+
+}
+
+
+.experience-item-container > .right-part {
+    display: flex;
+}
+
+.right-part > .dot-part {
+    width: max(20px, 2vw);
+    height: max(20px, 2vw);
+    border-radius: 50%;
+    border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.5s ease;
+
+}
+
+.right-part > .dot-part > .dot {
+    background-color: green;
+    width: max(10px, 1vw);
+    height: max(10px, 1vw);
+    border-radius: 50%;
+}
+
+
+.right-part .dot-part:hover {
+    transform: scale(1.1);
+}
+
+.right-part > .next-dot-part {
+    margin-left: max(10px, 1vw);
+}
+
+.next-dot-part .descriptions {
+    padding-left: max(25px, 1.5vw);
+    border-left: 2px dotted var(--secondary-color);
+    margin-left: max(20px, 1.5vw);
+}
+
+
+.descriptions > p {
+    margin: max(10px, 1vw) 0;
+    font-weight: bold;
+}
+
+.descriptions > li {
+    list-style:none;
+    font-size: max(10px, .8vw);
+    font-style: italic;
+}
+
+
+.descriptions .show-more {
+    display: flex;
+    align-items: center;
+    gap: max(6px, .4vw);
+    border-radius: max(20px, 2vw);
+    padding: max(5px, .3vw) max(10px, 1vw);
+    margin-top: max(10px, 1vw);
+    background-color: var(--secondary-color);
+    color: var(--white-middle-opacity);
+    width: fit-content;
+    cursor: pointer;
+    transition: all .4s ease-in-out;
+}
+
+.descriptions .show-more:hover {
+    transform: scale(1.1);
+}
+
+.show-more > span {
+    font-size: max(11px, .8vw);
+}
+
+
+@media (max-width: 848px) {
+    .experience-item-container {
+        grid-template-columns: 1fr;
+    }
+
+    .right-part > .next-dot-part{
+        margin-left: 0;
+    }
+}

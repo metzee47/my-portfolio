@@ -1,0 +1,58 @@
+:root {
+  /* --primary-color: linear-gradient(135deg, #0f2027, #203a43, #2c5364); */
+  --primary-color: linear-gradient(135deg, #141e30, #243b55);
+  --secondary-color: #243b55;
+  --background-gradient: linear-gradient(to bottom, rgba(243, 173, 59, 0.20), #f0d6ff);
+  --white-low-opacity: rgba(255, 255, 255, 0.51);
+  --white-middle-opacity: rgba(255, 255, 255, 0.75);
+  --white-high-opacity: rgba(255, 255, 255, 1);
+}
+
+* {
+  font-family: 'Space Grotesk', 'Raleway', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-size: max(12px, 1vw);
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+}
+
+body {
+  background-image: var(--background-gradient);
+
+}
+
+a {
+  text-decoration: none;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: max(24px, 2vw);
+}
+h2 {
+  font-size: max(22px, 1.8vw);
+}
+h3 {
+  font-size: max(20px, 1.61vw);
+}
+h4 {
+  font-size: max(18px, 1.4vw);
+}
+h5 {
+  font-size: max(16px, 1.2vw);
+}
+h6 {
+  font-size: max(14px, 1vw);
+}
+
+

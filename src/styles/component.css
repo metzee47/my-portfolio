@@ -1,0 +1,41 @@
+.main-iconize-it-container {
+    position: relative;
+    transition: all .3s ease-in-out;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    z-index: 100;
+    cursor: pointer;
+}
+
+.main-iconize-it-container:hover{
+    transform: scale(1.1);
+}
+
+.main-iconize-it-container > span {
+    position: absolute;
+    opacity: 0;
+    top: -85%;
+    right: 0;
+    text-wrap: nowrap;
+    padding: 3px 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: max(12px, 0.9vw);
+    font-weight: 500;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 999;
+    transition: all .3s ease-in-out;
+}
+
+.main-iconize-it-container.active > span {
+    opacity: 1;
+}
+
+
+.main-iconize-it-container svg {
+    width: max(15px, 1vw);
+    height: max(15px, 1vw);
+}

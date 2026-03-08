@@ -1,0 +1,59 @@
+.skills-list {
+    margin-top: max(20px, 2vw);
+    /* display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: max(20px, 2vw); */
+}
+
+.skill-item-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: max(10px, 1vw);
+
+    border-radius: max(6px, .4vw);
+    padding: max(15px, 1.2vw);
+    background-color: var(--white-low-opacity);
+    box-shadow: inset 0 0 max(10px, 1vw) var(--white-high-opacity);
+    text-transform: uppercase;
+}
+
+.skill-item-wrapper > .icon-container i {
+    font-size: max(20px, 2vw);
+}
+
+
+.swiper-pagination {
+  position: relative !important;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.swiper-pagination-bullet {
+    width: max(10px, .7vw) !important;
+    height: max(4px, .1vw) !important;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: var(--secondary-color);
+}
+
+.progression-bar {
+    position: relative;
+    background-color: var(--white-high-opacity);
+    border: 1px solid var(--secondary-color);
+    height: max(3px, .1vw);
+    border-radius: max(10px, 1vw);
+    width: 100%;
+    overflow: hidden;
+}
+
+.percentage-state {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    background-color: var(--secondary-color);
+}

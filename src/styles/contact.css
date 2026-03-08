@@ -1,0 +1,122 @@
+.contact-container{
+    background-color: var(--white-middle-opacity);
+    padding: max(20px, 2vw);
+    border-radius: max(10px, 1vw);
+}
+
+.contact-container > p {
+    width: 50%;
+    font-style: italic;
+    font-size: max(11px, .9vw);
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: max(20px, 2vw);
+    margin-top: max(20px, 2vw);
+}
+
+.contact-wrapper .contact-btn {
+    outline: none;
+    width: 100%;
+    border-radius: max(10px, .9vw);
+    height: max(40px, 3.5vw);
+    background-color: var(--secondary-color);
+    color: var(--white-high-opacity);
+    font-weight: bold;
+    font-size: max(12px, 1vw);
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+.contact-wrapper .contact-btn:hover {
+    background: var(--primary-color);
+}
+
+
+.contact-form .sent-success,
+.contact-form .sent-failed{
+    font-weight: bold;
+    font-size: max(9px, .7vw);
+    margin-top: max(11px, .8vw);
+    text-align: center;
+}
+
+.contact-form .sent-success{
+    color: #2ecc71;
+}
+
+.contact-form .sent-failed{
+    color: #e74c3c;
+}
+
+.contact-infos-item {
+    margin: max(14px, 1.2vw) 0;
+}
+
+.contact-infos-item > p {
+    font-size: max(10px, .8vw);
+    font-style: italic;
+}
+
+.social-links-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: max(10px, 1vw);
+}
+
+.social-links-wrapper a svg {
+    width: max(12px, 1vw);
+    height: max(12px, 1vw);
+    color: var(--secondary-color);
+    margin-top: max(5px, .4vw);
+}
+
+
+@media (max-width: 768px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-container > p {
+        width: 100%;
+    }
+}
+
+
+/* INPUT & TEXTAREA LABEL */
+
+.input-label {
+    display: flex;
+    flex-direction: column;
+    gap: max(5px, .4vw);
+    margin-bottom: max(10px, 1vw);
+
+}
+
+.input-label > label {
+    font-size: max(10px, .9vw);
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.input-label > input,
+.input-label > textarea
+{
+    outline: none;
+    border: none;
+    border-top: 1px solid var(--secondary-color);
+    /* box-shadow: inset 0 0 3px var(--secondary-color); */
+    width: 100%;
+    padding: max(6px, .5vw) max(14px, 1vw);
+    font-size: max(11px, .9vw);
+    color: var(--secondary-color);
+    border-radius: max(5px, .5vw);
+}
+
+.input-label > .error-field {
+    font-weight: bold;
+    font-size: max(9px, .7vw);
+    color: #e74c3c;
+}
