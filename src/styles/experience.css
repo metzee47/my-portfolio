@@ -22,6 +22,12 @@
 
 }
 
+.next-dot-part div h5,
+.left-part div h5
+{
+    flex: 1;
+}
+
 .left-part > .skills-wrapper {
     display: flex;
     align-items: center;
