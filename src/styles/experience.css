@@ -76,9 +76,9 @@
 }
 
 .next-dot-part .descriptions {
-    padding-left: max(25px, 1.5vw);
+    padding-left: max(25px, 2.25vw);
     border-left: 2px dotted var(--secondary-color);
-    margin-left: max(20px, 1.5vw);
+    margin-left: max(15px, 1.25vw);
 }
 
 

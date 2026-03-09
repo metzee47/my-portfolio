@@ -17,8 +17,8 @@ export default function Experience() {
 
                 MY_EXPERIENCES.map(item => (
                     <ExperienceItem
-                        key={item.id}
                         {...item}
+                        key={item.id}
                         monthsCount={calculateMonthsBetween(item.fromDate, item.toDate)}
                     />
                 ))
@@ -49,6 +49,7 @@ const ExperienceItem = ({ companyName, fromDate, toDate, position, descriptions 
                     {
                         skills.map((skill, index) => (
                             <span
+                                key={skill}
                                 style={{ backgroundColor: index % 2 === 0 ? '#e6f4ff' : '#fff3e0' }}
                             >
                                 {skill}
@@ -72,17 +73,17 @@ const ExperienceItem = ({ companyName, fromDate, toDate, position, descriptions 
                     <ul className="descriptions">
                         {
                             descriptions.slice(0, renderNumber).map(desc => (
-                                <>
+                                <div key={desc.category}>
                                     <p>{desc.category}</p>
                                     {
                                         desc.items.map(item => (
-                                            <li>{item}</li>
+                                            <li key={item}>{item}</li>
                                         ))
                                     }
 
 
 
-                                </>
+                                </div>
                             ))
                         }
 

@@ -11,15 +11,15 @@ export default function AboutMe() {
 
     return (
         <>
-        
+
             <div className="projects-stats" id="about">
                 <div className="list-container">
                     {
-                        PROJECT_LIST.map((project, index) => (
+                        PROJECT_LIST.map((project) => (
                             <ProjectCountItem
-                                // key={project.label}
                                 {...project}
-                                
+                                key={project.label}
+
                             />
                         ))
                     }
@@ -39,10 +39,10 @@ export default function AboutMe() {
                     {
                         LAST_PROJECT_LIST.map((project) => (
                             <LastProjectItem
-                                // key={project.appName}
                                 {...project}
+                                key={project.appName}
                                 imgSrc={project.key === 1 ? mobileAppImg : project.key === 2 ? webappImg : websiteImg}
-                               
+
                             />
                         ))
                     }
@@ -52,14 +52,14 @@ export default function AboutMe() {
     )
 }
 
-const ProjectCountItem = ({ label, value, icon, iconBg, iconDescription }) => (
+const ProjectCountItem = ({ label, count, icon, iconBg, iconDescription }) => (
     <div className="project-count-item">
         <IconizeIt bgColor={iconBg} description={iconDescription}>
             {icon}
         </IconizeIt>
         <div className="description">
             <h6>{label}</h6>
-            <p>{value} projets</p>
+            <p>{count} projets</p>
         </div>
     </div>
 )
@@ -70,7 +70,7 @@ const LastProjectItem = ({ type, appName, imgSrc, androidLink, iosLink, appLink,
         window.open(androidLink || iosLink || appLink, '_blank');
     }
     return (
-        <div className="last-project-item" style={{background: bgColor}}>
+        <div className="last-project-item" style={{ background: bgColor }}>
             <h4>{type}</h4>
             <p>{appName}</p>
             <div className="img-container">

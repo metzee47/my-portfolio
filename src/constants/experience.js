@@ -1,5 +1,6 @@
 export const MY_EXPERIENCES = [
     {
+        id: 3,
         companyName: 'VNB IT',
         position: 'Full Stack Developper - Tech Lead',
         fromDate: '2025-01-13',
@@ -49,6 +50,7 @@ export const MY_EXPERIENCES = [
         ]
     },
     {
+        id: 2,
         companyName: 'VNB IT',
         position: 'Frontend Developpeur - Integrateur',
         fromDate: '2025-01-13',
@@ -78,6 +80,7 @@ export const MY_EXPERIENCES = [
         ]
     },
     {
+        id: 4,
         companyName: 'VNB IT',
         position: 'Frontend Stagiaire',
         fromDate: '2024-09-17',
@@ -98,6 +101,7 @@ export const MY_EXPERIENCES = [
         ]
     },
     {
+        id: 5,
         companyName: 'FADESOL',
         position: 'Frontend - Designer UI/UX Stagiaire',
         fromDate: '2024-02-01',
