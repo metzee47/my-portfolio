@@ -82,12 +82,12 @@
 }
 
 
-.descriptions > p {
+.descriptions  p {
     margin: max(10px, 1vw) 0;
     font-weight: bold;
 }
 
-.descriptions > li {
+.descriptions  li {
     list-style:none;
     font-size: max(10px, .8vw);
     font-style: italic;
