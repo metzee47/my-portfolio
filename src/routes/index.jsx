@@ -1,11 +1,13 @@
 import React from 'react'
-import { Routes, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 const AppRoutes = () => {
   return (
-    <Routes>
-      <Route path="/" element={<div>Home</div>} />
-    </Routes>
+    <Router>
+      <Routes>
+        <Route path="/" element={<div>Home</div>} />
+      </Routes>
+    </Router>
   )
 }
 
