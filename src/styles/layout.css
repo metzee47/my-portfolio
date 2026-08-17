@@ -1,0 +1,148 @@
+/* Header */
+
+header.header {
+    justify-content: space-between;
+    padding: var(--mini-gap) var(--giga-gap);
+    gap: var(--gap);
+    box-shadow: 0 2px 4px var(--border);
+}
+
+.logo-and-title {
+    flex: .8;
+    cursor: pointer;
+}
+
+nav.menu {
+    flex: 1.2;
+}
+
+.logo-and-title .logo {
+    display: flex;
+    justify-content: center;
+    width: max(35px, 3.1vw);
+    height: max(35px, 3.1vw);
+    border-radius: var(--min-radius);
+    background-color: var(--primary);
+}
+
+.logo-and-title .title {
+    flex-direction: column;
+    gap: .3rem;
+}
+
+.title>p {
+    text-transform: uppercase;
+}
+
+.title>p:hover {
+    text-decoration: underline;
+}
+
+.menu .menu-hamburger {
+    display: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.menu .menu-hamburger:hover {
+    transform: scale(1.2);
+}
+
+.menu .menu-options {
+    flex: 1;
+    justify-content: space-between;
+    gap: var(--gap);
+}
+
+.menu .nav-menu {
+    gap: var(--gap);
+}
+
+.nav-menu>li {
+    list-style: none;
+}
+
+.nav-menu>li>a {
+    font-weight: normal;
+}
+
+.nav-menu>li>a.active {
+    font-weight: bold;
+    color: var(--primary);
+    border-bottom: 3px solid var(--primary);
+}
+
+
+.nav-options .lang span,
+.nav-options .theme p {
+    font-size: var(--mini-gap);
+}
+
+.nav-options .theme,
+.nav-options .lang {
+    cursor: pointer;
+    border-radius: var(--min-radius);
+    padding: .3rem .7rem;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+}
+
+.nav-options .theme:hover,
+.nav-options .lang:hover {
+    transform: scale(1.04);
+}
+
+.nav-options .theme {
+    background-color: var(--bg-card);
+
+}
+
+.theme>p {
+    font-weight: bold;
+}
+
+.nav-options .lang {
+    background-color: var(--bg-card-ter);
+}
+
+
+@media (max-width:726px) {
+
+    header.header.open {
+        align-items: flex-start;
+    }
+
+    .menu .menu-hamburger {
+        display: block;
+    }
+
+    nav.menu,
+    .menu .menu-options,
+    .menu-options .nav-menu {
+        align-items: flex-end;
+        flex-direction: column;
+    }
+
+    .menu .menu-options,
+    .menu.close .menu-options {
+        display: none;
+    }
+
+    .menu.open .menu-options {
+        display: flex;
+    }
+
+    .logo-and-title {
+        flex: none;
+    }
+
+    nav.menu {
+        flex: 1;
+    }
+}
+
+@media (max-width:424px) {
+    header.open .logo-and-title .title{
+        display: none;
+    }
+}

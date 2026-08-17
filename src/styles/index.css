@@ -15,20 +15,24 @@
 
 
   /* general properties */
-  --font: max(14px, 1.2vw);
+  --font: max(13px, 1.1vw);
   --gap: max(20px, 2vw);
   --mini-gap: max(10px, .9vw);
   --mega-gap: max(35px, 3.1vw);
   --giga-gap: max(60px, 5.5vw);
+  --radius: max(8px, .7vw);
+  --min-radius: max(4px, .4vw);
+  --max-radius: max(12px, 1vw);
+  --full-radius: 50%;
   --transition: all 0.3s ease;
 
 
   @media (max-width: 768px) {
-    --font: 12px;
-    --gap: 12px;
-    --mini-gap: 7px;
-    --mega-gap: 22px;
-    --giga-gap: 37px;
+    --font: 9px;
+    --gap: 9px;
+    --mini-gap: 5px;
+    --mega-gap: 13px;
+    --giga-gap: 17px;
   }
 
 
@@ -56,7 +60,7 @@
   padding: 0;
   box-sizing: border-box;
   font-size: var(--font);
-  font-family: "Work Sans", "Syne", sans-serif;
+  font-family:  "Syne", "Work Sans", sans-serif;
 }
 
 
@@ -68,13 +72,14 @@ html, body{
 
 /* links  */
 a{
-  color: var(--primary);
+  color: var(--head-text);
+  font-weight: bold;
   text-decoration: none;
   transition: var(--transition);
 }
 
 a:hover{
-  color: var(--secondary);
+  color: var(--primary);
 }
 
 
@@ -98,8 +103,21 @@ h4{
   font-size: max(18px, 1.6vw);
 }
 h5{
-  font-size: max(16px, 1.4vw);
+  font-size: max(14px, 1.4vw);
 }
 h6{
-  font-size: max(14px, 1.2vw);
+  font-size: max(10px, 1vw);
+}
+
+
+/* duplicate styles */
+.flex-center,
+.flex
+{
+  display: flex;
+  gap: var(--radius);
+}
+
+.flex-center{
+  align-items: center;
 }
