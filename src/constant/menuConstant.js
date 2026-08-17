@@ -1,7 +1,7 @@
 export const MENU = [
     {
         label: "Accueil",
-        href: "home"
+        href: ""
     },
     {
         label: "Projets",

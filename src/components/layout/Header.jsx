@@ -37,7 +37,7 @@ const Header = () => {
                             MENU.map((item, index) => (
                                 <li key={index}>
                                     <a 
-                                        href={`#${item.href}`}
+                                        href={`${item.href}`}
                                         className={`${isMenuItemActive(item.label) ? 'active' : ''}`}
                                         onClick={() => toggleMenu(item.label)}
                                     >

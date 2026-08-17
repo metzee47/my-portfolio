@@ -146,3 +146,10 @@ nav.menu {
         display: none;
     }
 }
+
+
+/* Main */
+main.main{
+    padding: var(--mega-gap) var(--giga-gap);
+
+}

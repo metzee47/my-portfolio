@@ -1,6 +1,50 @@
 /* Mixed-Text */
 .mixed-text span {
-    font-size: max(28px, 2.5vw);
+    font-size: max(34px, 3.2vw);
     font-weight: bold;
     color: var(--primary);
+    font-family: "Work Sans", sans-serif;
+
+}
+
+
+
+/* Button */
+
+.btn-primary{
+  background-color: var(--primary);
+}
+
+.btn-secondary{
+  background-color: var(--bg-card);
+}
+
+
+
+/* Card */
+
+.card{
+    padding: var(--gap);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.card.primary-animation {
+    background-color: var(--bg-card);
+}
+.card.secondary-animation {
+    background-color: var(--bg-card-sec);
+}
+
+.card:hover{
+    transform: scale(1.02) translateY(-1%);
+}
+
+.card.primary-animation:hover {
+    border-color: var(--primary) 
+}
+.card.secondary-animation:hover {
+    border-color: var(--secondary) 
 }

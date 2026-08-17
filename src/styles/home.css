@@ -1,0 +1,92 @@
+/* top section */
+
+.introduce-myself .text-part{
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+
+.summary {
+    flex-direction: column;
+    gap: var(--mini-gap);
+    padding: var(--gap);
+    border-radius: var(--radius);
+    border: 2px solid var(--border);
+    background-color: var(--bg-card);
+    width: clamp(40%, 320px, 50%);
+}
+
+.summary .chiffres{
+    justify-content: space-between;
+}
+
+
+
+.summary .separator{
+    height: 2px;
+    background-color: var(--border);
+}
+
+.summary .stacks span{
+    font-size: max(10px, 1vw);
+}
+
+
+/* middle section */
+
+.step-item-wrapper{
+    justify-content: center;
+    gap: var(--gap);
+    flex-wrap: wrap;
+    border-bottom: 1px solid var(--border);
+    border-top: 1px solid var(--border);
+    margin: var(--mega-gap) 0;
+    padding: var(--gap) 0;
+}
+
+.step-item-wrapper .step-item{
+    flex: 1;
+    max-width: max(400px, 35vw);
+    flex-direction: column;
+
+}
+
+
+
+
+/* projects section */
+.projects{
+    margin-bottom: var(--mega-gap);
+}
+
+.projects .introduction,
+.projects .project-item
+{
+    flex-direction: column;
+}
+
+.project-item .top-part{
+    justify-content: space-between;
+    margin-bottom: var(--gap);
+}
+
+.project-item .top-part .bg-primary,
+.project-item .top-part .bg-secondary
+{
+    display: inline-block;
+    min-width: max(60px, 5.5vw);
+    text-align: center;
+    padding: 0 var(--mini-gap);
+    border-radius: var(--max-radius);
+    text-transform: uppercase;
+    font-size: max(10px, .9vw);
+}
+
+.project-item .top-part .bg-primary{
+    background-color: var(--primary);
+    color: var(--head-text);
+}
+.project-item .top-part .bg-secondary{
+    background-color: var(--secondary);
+    color: var(--bg);
+}
