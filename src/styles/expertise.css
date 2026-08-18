@@ -1,0 +1,125 @@
+.skills{
+    gap: var(--gap);
+}
+
+.skills .text-part,
+.cards-wrapper .skill-card-item
+{
+    flex-direction: column;
+    gap: var(--mini-gap);
+}
+
+.skills .text-part{
+    flex: .9;
+}
+
+.text-part .btn{
+    width: fit-content;
+}
+
+.skills .cards-wrapper {
+    flex: 1.1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--mini-gap);
+}
+
+.skill-card-item svg{
+    font-size: calc(var(--mega-gap) - var(--min-radius));
+    margin-bottom: var(--mini-gap);
+}
+
+.skill-card-item .flex-center{
+    flex-wrap: wrap;
+    gap: var(--min-radius)
+}
+
+.skill-card-item .stack-item{
+    border-radius: var(--mini-radius);
+    font-size: max(10px, 1vw);
+    padding: 0 var(--mini-gap);
+    border-radius: var(--radius);
+}
+
+.card.primary-animation .skill-card-item .stack-item{
+    background-color: var(--bg-card-sec);
+}
+.card.secondary-animation .skill-card-item .stack-item{
+    background-color: var(--bg-card);
+}
+
+
+.tech-lead-skills{
+    margin: var(--mega-gap) 0;
+    gap: var(--gap);
+}
+
+.tech-lead-skills .text-part{
+    flex: .6;
+}
+
+.tech-lead-skills .skills-wrapper{
+    flex: 1.4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--mini-gap);
+}
+
+.formations{
+    flex-direction: column;
+    gap: var(--gap);
+}
+
+.formations .top-sections > span,
+.formations .top-sections > h1,
+.formations .top-sections > p{
+    text-align: center;
+    display: block;
+}
+
+
+
+
+.formations .experiences-wrapper{
+    justify-content: center;
+    gap: var(--gap);
+    flex-wrap: wrap;
+}
+
+.experiences-wrapper .experience-card-item{
+    width: max(320px, 45%);
+    flex-direction: column;
+}
+
+.experience-card-item .type-part{
+    justify-content: space-between;
+    margin-bottom: var(--mini-gap);
+}
+
+.type-part span {
+    padding: 0 var(--radius);
+    border-radius: var(--max-radius);
+}
+
+.experience-card-item.primary-animation .type-part span {
+    background-color: var(--primary);
+    color: var(--head-text);
+
+}
+
+.experience-card-item.secondary-animation .type-part span {
+    background-color: var(--secondary);
+    color: var(--bg);
+
+}
+
+.gorilla-skills {
+    flex-wrap: wrap;
+    margin: var(--mega-gap) 0;
+}
+
+.gorilla-skills .text-part{
+    flex: 1;
+    flex-direction: column;
+    gap: var(--mini-gap)
+}

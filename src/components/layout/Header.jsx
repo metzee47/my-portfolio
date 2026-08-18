@@ -6,6 +6,7 @@ import { MdOutlineLightMode } from "react-icons/md";
 import '@/styles/layout.css'
 import { useMenu, useTheme } from '@/context/AppContext';
 import { MENU } from '@/constant/menuConstant';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
 
@@ -36,13 +37,13 @@ const Header = () => {
                         {
                             MENU.map((item, index) => (
                                 <li key={index}>
-                                    <a 
-                                        href={`${item.href}`}
+                                    <Link 
+                                        to={`${item.href}`}
                                         className={`${isMenuItemActive(item.label) ? 'active' : ''}`}
                                         onClick={() => toggleMenu(item.label)}
                                     >
                                         {item.label}
-                                    </a>
+                                    </Link>
                                 </li>
                             ))
                         }

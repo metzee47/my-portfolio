@@ -9,7 +9,7 @@ export const MENU = [
     },
     {
         label: "Expertise",
-        href: "contact"
+        href: "experiences-and-formations"
     },
     {
         label: "Contact",
