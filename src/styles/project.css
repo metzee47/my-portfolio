@@ -83,3 +83,21 @@
 .projects-btm-part{
     margin-top: 0;
 }
+
+
+
+@media (max-width:920px){
+    .projects-top-section{
+        width: 85%;
+    }
+}
+
+@media (max-width:650px){
+    .projects-top-section{
+        width: 100%;
+    }
+
+    .projects-wrapper {
+        grid-template-columns: 1fr;
+    }
+}

@@ -132,7 +132,8 @@
 }
 
 @media (max-width:738px){
-    .tech-lead-skills{
+    .tech-lead-skills
+    {
         flex-direction: column;
         align-items: center;
     }
@@ -154,6 +155,12 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+    }
+
+    .gorilla-skills
+    {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     
