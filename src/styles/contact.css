@@ -1,0 +1,99 @@
+.contact{
+    gap: var(--gap);
+    /* align-items: flex-start; */
+}
+
+.contact .left-part{
+    flex: .8;
+    flex-direction: column;
+    gap: var(--mini-gap);
+}
+
+.left-part .contact-item-wrapper{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--mini-gap);
+}
+
+.contact-item-wrapper .contact-link-item{
+    padding: var(--min-radius) var(--mini-gap);
+    padding-bottom: calc(var(--mini-gap) * 1.2);
+
+}
+
+.contact-link-item .text-side span
+{
+    font-size: var(--mini-gap);
+}
+
+.contact-link-item .text-side h6:hover{
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.contact-link-item .icon-side{
+    justify-content: center;
+    width: max(27px, 2.5vw);
+    height: max(27px, 2.5vw);
+    border-radius: var(--full-radius);
+    background-color: var(--bg-card);
+}
+
+.contact .right-part{
+    flex: 1.2;
+    background-color: var(--bg-card-sec);
+    padding: var(--gap);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+}
+
+.contact .right-part > div {
+    justify-content: space-between;
+    margin-bottom: var(--gap);
+}
+
+.contact .right-part > form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--mini-gap);
+
+}
+
+form > div > .input-form{
+    flex: 1
+}
+
+form .input-form,
+form .textarea-form
+{
+    display: flex;
+    flex-direction: column;
+    gap: var(--min-radius);
+}
+
+.input-form input,
+.textarea-form textarea
+{
+    outline: none;
+    border: 1px solid var(--border);
+    padding: var(--radius) var(--mini-gap);
+    border-radius: var(--min-radius);
+    background-color: var(--bg-card);
+    color: var(--head-text-sec);
+}
+
+form label,
+form > p,
+form input::placeholder,
+form textarea::placeholder
+{
+    font-size: var(--mini-gap);
+}
+
+form > p{
+    line-height: 1.5;
+}
+
+.textarea-form textarea{
+    min-height: 150px;
+}

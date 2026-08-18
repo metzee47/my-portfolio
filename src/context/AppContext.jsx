@@ -21,7 +21,7 @@ export default function AppProvider({children}){
     const [lang, setLang] = useState("en");
     const [activeMenu, setActiveMenu] = useState(MENU_ITEMS.home);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-    const [theme, setTheme] = useState(HTML.getAttribute("data-theme"));
+    const [theme, setTheme] = useState('dark');
 
 
     // theme handling

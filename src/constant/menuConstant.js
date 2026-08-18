@@ -5,7 +5,7 @@ export const MENU = [
     },
     {
         label: "Projets",
-        href: "about"
+        href: "projects"
     },
     {
         label: "Expertise",

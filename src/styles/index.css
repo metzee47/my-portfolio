@@ -1,17 +1,17 @@
 :root{
-  /* light by default */
-  --primary: #8FBC8F;
-  --secondary: #1E3A8A;
+  /* dark by default */
+  --primary: #1E3A8A;
+  --secondary: #40E0D0;
 
-  --bg: #F8FAFC;
-  --p-text: #64748B;
-  --head-text: #10131A;
-  --head-text-sec: #1E293B;
+  --bg: #10131A;
+  --p-text: #9DA8BA;
+  --head-text: #F4F7FB;
+  --head-text-sec: #E6EAF2;
 
-  --bg-card: #FFFFFF;
-  --bg-card-sec: #E2E8F0;
-  --bg-card-ter: #F1F5F9;
-  --border: #E2E8F0;
+  --bg-card: #151A24;
+  --bg-card-sec: #1B2130;
+  --bg-card-ter: #252C3C;
+  --border: #2B3446;
 
 
   /* general properties */
@@ -40,18 +40,20 @@
 
 
 [data-theme="dark"] {
-  --primary: #1E3A8A;
-  --secondary: #40E0D0;
+    --primary: #8FBC8F;
+  --secondary: #1E3A8A;
 
-  --bg: #10131A;
-  --p-text: #9DA8BA;
-  --head-text: #F4F7FB;
-  --head-text-sec: #E6EAF2;
+  --bg: #F8FAFC;
+  --p-text: #64748B;
+  --head-text: #10131A;
+  --head-text-sec: #1E293B;
 
-  --bg-card: #151A24;
-  --bg-card-sec: #1B2130;
-  --bg-card-ter: #252C3C;
-  --border: #2B3446;
+  --bg-card: #FFFFFF;
+  --bg-card-sec: #E2E8F0;
+  --bg-card-ter: #F1F5F9;
+  --border: #E2E8F0;
+
+  
   
 }
 
