@@ -123,3 +123,56 @@
     flex-direction: column;
     gap: var(--mini-gap)
 }
+
+
+@media (max-width:910px){
+    .skills{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:738px){
+    .tech-lead-skills{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech-lead-skills .text-part span,
+    .tech-lead-skills .text-part p{
+        text-align: center;
+        width: 100%;
+        display: block;
+    }
+
+    .experiences-wrapper .experience-card-item{
+        width: 48%;
+
+    }
+
+    .tech-lead-skills .skills-wrapper{
+        flex: 1;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    
+}
+
+
+@media (max-width:560px){
+    .experiences-wrapper .experience-card-item{
+        width: 100%;
+    }
+
+    .skills .cards-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-wrapper .skill-card-item{
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+}
