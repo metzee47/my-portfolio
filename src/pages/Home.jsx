@@ -97,7 +97,7 @@ export default function Home () {
 
 
             {/* projects section */}
-            <section className="projects flex">
+            <section className="projects home flex">
 
                 <div className="introduction flex">
                     <span className="text-secondary">PROJETS SELECTIONNES</span>
@@ -108,17 +108,21 @@ export default function Home () {
                     </div>
                 </div>
 
-                <ProjectItem
-                    name={'LCR'}
-                    description={'Application livrée à l’échelle, avec plus de 5 000 utilisateurs inscrits.'}
-                    titlePrimary
-                />
+                <div className="projects-item-wrapper flex">
 
-                <ProjectItem
-                    name={'Nexuroom'}
-                    description={'Produit digital adopté par plus de 2 000 utilisateurs inscrits.'}
-                    titlePrimary={false}
-                />
+                    <ProjectItem
+                        name={'LCR'}
+                        description={'Application livrée à l’échelle, avec plus de 5 000 utilisateurs inscrits.'}
+                        titlePrimary
+                    />
+
+                    <ProjectItem
+                        name={'Nexuroom'}
+                        description={'Produit digital adopté par plus de 2 000 utilisateurs inscrits.'}
+                        titlePrimary={false}
+                    />
+                </div>
+
             </section>
 
 
@@ -127,6 +131,7 @@ export default function Home () {
                 firstPart={'Une progression constante vers'}
                 coloredPart={" l'excellence "}
                 lastPart={"technique."}
+                className={'home-mixed-text'}
             />
             <section className="step-item-wrapper flex">
                 <StepItem

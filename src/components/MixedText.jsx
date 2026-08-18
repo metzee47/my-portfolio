@@ -1,8 +1,8 @@
 import "@/styles/component.css"
 
-export const MixedText = ({firstPart, coloredPart, lastPart}) => {
+export const MixedText = ({firstPart, coloredPart, lastPart, className}) => {
     return (
-        <h1 className="mixed-text">
+        <h1 className={`mixed-text ${className}`}>
             {firstPart}
             <span>{coloredPart}</span>
             {
