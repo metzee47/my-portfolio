@@ -29,12 +29,15 @@
 
 
   @media (max-width: 768px) {
-    --font: 9px;
+    /* --font: 9px;
     --gap: 9px;
     --mini-gap: 5px;
     --mega-gap: 13px;
-    --giga-gap: 17px;
+    --giga-gap: 17px; */
+    --giga-gap: 27px; 
   }
+
+ 
 
 
 }
@@ -101,7 +104,6 @@ h1,h2,h3{
 
 h1{
   font-size: max(34px, 3.2vw);
-  
 }
 h2{
   font-size: max(30px, 2.8vw);
@@ -121,6 +123,26 @@ h6{
 
 p, span {
   line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  h1,h2,h3{
+    line-height: 3rem;
+  }
+
+  h1{
+    font-size: 28px
+  }
+  h2{
+    font-size: 24px
+  }
+  h3{
+    font-size: 20px
+  }
+  h4{
+    font-size: 17px
+  }
+  
 }
 
 

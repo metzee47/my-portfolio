@@ -4,7 +4,16 @@
     font-weight: bold;
     color: var(--primary);
     font-family: "Work Sans", sans-serif;
+}
 
+@media (max-width: 768px) {
+  .mixed-text span{
+    line-height: 3rem;
+  }
+
+  .mixed-text span{
+    font-size: 28px
+  }
 }
 
 
