@@ -1,28 +1,54 @@
 import { contactLink, expertiseLink, homeLink, projectLink } from '@/routes/links'
 
+// export const MENU = [
+//     {
+//         label: "Accueil",
+//         href: homeLink,
+//     },
+//     {
+//         label: "Projets",
+//         href: projectLink
+//     },
+//     {
+//         label: "Expertise",
+//         href: expertiseLink
+//     },
+//     {
+//         label: "Contact",
+//         href: contactLink
+//     }
+// ]
+
+
+// export const MENU_ITEMS = {
+//     home: "Accueil",
+//     projects: "Projets",
+//     expertise: "Expertise",
+//     contact: "Contact"
+// }
+
 export const MENU = [
     {
-        label: "Accueil",
+        label: "header_menu_home",
         href: homeLink,
     },
     {
-        label: "Projets",
+        label: "header_menu_projects",
         href: projectLink
     },
     {
-        label: "Expertise",
+        label: "header_menu_expertise",
         href: expertiseLink
     },
     {
-        label: "Contact",
+        label: "header_menu_contact",
         href: contactLink
     }
 ]
 
-
 export const MENU_ITEMS = {
-    home: "Accueil",
-    projects: "Projets",
-    expertise: "Expertise",
-    contact: "Contact"
+    home: "header_menu_home",
+    projects: "header_menu_projects",
+    expertise: "header_menu_expertise",
+    contact: "header_menu_contact"
 }

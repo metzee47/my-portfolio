@@ -6,16 +6,16 @@ i18n
   .use(Backend)
   .use(initReactI18next)
   .init({
-    lng: "fr",
+    lng: "en",
     fallbackLng: "fr",
     ns: [
       "home",
-      "projects",
+      "project",
       "expertise",
       "contact",
-      "common",
+      "layout",
     ],
-    defaultNS: "common",
+    defaultNS: "layout",
     interpolation: { escapeValue: false },
     backend: {
       loadPath: "/locales/{{lng}}/{{ns}}.json"

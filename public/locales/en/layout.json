@@ -1,0 +1,16 @@
+{
+  "header_logo_text": "MS",
+  "header_title_name": "Mouhamadou Sylla",
+  "header_title_role": "Full Stack - Tech Lead",
+
+  "header_menu_home": "Home",
+  "header_menu_expertise": "Expertise",
+  "header_menu_projects": "Projects",
+  "header_menu_contact": "Contact",
+
+  "header_lang_fr": "FR",
+  "header_lang_en": "EN",
+
+  "header_theme_night": "Night",
+  "header_theme_day": "Day"
+}

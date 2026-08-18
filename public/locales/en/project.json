@@ -1,0 +1,35 @@
+{
+  "projects_section_title": "Achievements",
+  "projects_mixed_first": "Applications designed to be used, then ",
+  "projects_mixed_colored": " grow",
+  "projects_mixed_last": " their impact.",
+  "projects_intro_paragraph": "Two products delivered with a full stack approach: rigorous architecture, clear experience, and production-oriented delivery.",
+
+  "project_lcr_title": "LCR",
+  "project_lcr_description": "A high-impact project to which Mouhamadou Sylla contributed with a complete product approach, from design to production.",
+  "project_lcr_skills": "Figma · React Native · Expo · Google Auth · Apple Auth · Push Notifications · Node.js · Sequelize · Postgres SQL · REST API · AWS S3 · Socket.io · Production",
+  "project_lcr_type": "Mobile application",
+  "project_lcr_platforms": "Android · iOS",
+  "project_lcr_stats": "5000+",
+
+  "project_lcrpro_title": "LCR PRO (B2B)",
+  "project_lcrpro_description": "A high-impact project to which Mouhamadou Sylla contributed with a complete product approach, from design to production.",
+  "project_lcrpro_skills": "Figma · React Native · Expo · Google Auth · Apple Auth · Push Notifications · Node.js · Sequelize · Postgres SQL · REST API · AWS S3 · Socket.io · Production",
+  "project_lcrpro_type": "Mobile application",
+  "project_lcrpro_platforms": "Android · iOS",
+  "project_lcrpro_stats": "100+",
+
+  "project_nexuroom_title": "Nexuroom",
+  "project_nexuroom_description": "A user-oriented product that demonstrates the ability to quickly deliver reliable and scalable applications.",
+  "project_nexuroom_skills": "Figma · React · Tailwind CSS · Responsiveness · i18next · Node.js · Prisma · Postgres SQL · REST API · AWS S3",
+  "project_nexuroom_type": "Web application & website",
+  "project_nexuroom_platforms": "Web · Mobile",
+  "project_nexuroom_stats": "2000+",
+
+  "projects_bottom_title": "Delivery approach",
+  "projects_bottom_subtitle": "Build fast, without sacrificing quality.",
+  "projects_bottom_paragraph": "Applications delivered within tight deadlines, often between three and four months, with constant attention to the final product.",
+  "projects_bottom_btn": "Discuss a project",
+  "registered_users": "registered users"
+
+}

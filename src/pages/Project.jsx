@@ -4,25 +4,75 @@ import MainLayout from "@/components/layout/MainLayout";
 import { MixedText } from "@/components/MixedText";
 import { MENU_ITEMS } from "@/constant/menuConstant";
 import { PROJECTS } from "@/constant/ProjectConstant";
+import { useTranslate } from "@/hooks/useTranslation";
 import "@/styles/project.css"
 
 
 
+// export default function Project() {
+//     return (
+//         <MainLayout
+//             activeMenu={MENU_ITEMS.projects}
+            
+//         >
+//             {/* top section */}
+//             <section className="projects-top-section flex">
+//                 <span className="text-secondary">REALISATIONS</span>
+//                 <MixedText
+//                     firstPart={'Des applications conçues pour être utilisées, puis faire '}
+//                     coloredPart={' grandir'}
+//                     lastPart={' leur impact.'}
+//                 />
+//                 <p>Deux produits livrés avec une approche full stack : rigueur d’architecture, expérience claire et livraison orientée production.</p>
+//             </section>
+
+//             {/* projects */}
+//             <sections className="projects-wrapper">
+//                 {
+//                     PROJECTS.map(project => (
+//                         <ProjectCardItem key={project.title} item={project} />
+//                     ))
+//                 }
+//             </sections>
+
+//             {/* bottom part */}
+//             <Card
+//                 className="projects-btm-part gorilla-skills flex-center"
+//             >
+//                 <div className="text-part flex">
+//                     <span className="text-primary">APPROCHE DE LIVRAISON</span>
+//                     <h6>Construire vite, sans sacrifier la qualité.</h6>
+//                     <p>
+//                         Des applications livrées dans des délais serrés, souvent entre trois et quatre mois, avec une attention constante portée au produit final.
+//                     </p>
+//                 </div>
+
+//                 <PrimaryButton>
+//                     Echanger sur un projet
+//                 </PrimaryButton>
+
+
+
+//             </Card>
+//         </MainLayout>
+//     )
+// }
+
 export default function Project() {
+    const {tp} = useTranslate()
     return (
         <MainLayout
             activeMenu={MENU_ITEMS.projects}
-            
         >
             {/* top section */}
             <section className="projects-top-section flex">
-                <span className="text-secondary">REALISATIONS</span>
+                <span className="text-secondary">{tp("projects_section_title")}</span>
                 <MixedText
-                    firstPart={'Des applications conçues pour être utilisées, puis faire '}
-                    coloredPart={' grandir'}
-                    lastPart={' leur impact.'}
+                    firstPart={tp("projects_mixed_first")}
+                    coloredPart={tp("projects_mixed_colored")}
+                    lastPart={tp("projects_mixed_last")}
                 />
-                <p>Deux produits livrés avec une approche full stack : rigueur d’architecture, expérience claire et livraison orientée production.</p>
+                <p>{tp("projects_intro_paragraph")}</p>
             </section>
 
             {/* projects */}
@@ -35,30 +85,27 @@ export default function Project() {
             </sections>
 
             {/* bottom part */}
-            <Card
-                className="projects-btm-part gorilla-skills flex-center"
-            >
+            <Card className="projects-btm-part gorilla-skills flex-center">
                 <div className="text-part flex">
-                    <span className="text-primary">APPROCHE DE LIVRAISON</span>
-                    <h6>Construire vite, sans sacrifier la qualité.</h6>
-                    <p>
-                        Des applications livrées dans des délais serrés, souvent entre trois et quatre mois, avec une attention constante portée au produit final.
-                    </p>
+                    <span className="text-primary">{tp("projects_bottom_title")}</span>
+                    <h6>{tp("projects_bottom_subtitle")}</h6>
+                    <p>{tp("projects_bottom_paragraph")}</p>
                 </div>
 
                 <PrimaryButton>
-                    Echanger sur un projet
+                    {tp("projects_bottom_btn")}
                 </PrimaryButton>
-
-
-
             </Card>
         </MainLayout>
     )
 }
 
 
-const ProjectCardItem = ({ item }) => (
+
+const ProjectCardItem = ({ item }) => {
+    const {tp} = useTranslate()
+
+    return (
     <Card
         primaryAnimation={false}
         className={"project-card-item"}
@@ -71,32 +118,34 @@ const ProjectCardItem = ({ item }) => (
                 <p className="flex-center">
                     {
                         item.platforms.map(p => (
-                            <span key={p}>{p}</span>
+                            <span key={p}>{tp(p)}</span>
                         ))
                     }
                 </p>
                 <item.icon />
             </div>
-            <p>{item.type}</p>
-            <h5>{item.title}</h5>
-
+            <p>{tp(item.type)}</p>
+            <h5>{tp(item.title)}</h5>
+    
         </Card>
-
+    
         <div className="bottom-part flex">
-            <p>{item.description}</p>
+            <p>{tp(item.description)}</p>
             <p className="project-skills flex-center">
                 {
                     item.skills.map(s => (
-                        <span key={s}>{s}</span>
+                        <span key={s}>{tp(s)}</span>
                     ))
                 }
             </p>
             <div className="separator"></div>
             <div className="project-stats flex-center">
-                <h4 className={`${item.isPrimary ? "text-primary" : "text-secondary"}`}>{item.stats}</h4>
-                <span>utilisateurs inscrits</span>
+                <h4 className={`${item.isPrimary ? "text-primary" : "text-secondary"}`}>{tp(item.stats)}</h4>
+                <span>{tp('registered_users')}</span>
             </div>
         </div>
-
+    
     </Card>
-)
+    )
+}
+    

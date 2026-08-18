@@ -2,36 +2,37 @@ import { MdOutlineLaptopChromebook } from "react-icons/md";
 import { HiOutlineDeviceMobile } from "react-icons/hi";
 
 export const PROJECTS = [
-    
     {
-        title: "LCR",
-        description: "Un projet à fort impact, auquel Mouhamadou Sylla a contribué dans une démarche de produit complet, de la conception à la mise en production.",
+        title: "project_lcr_title",
+        description: "project_lcr_description",
         skills: ["Figma", "React Native", "Expo", "Google Auth", "Apple Auth", "Push Notifications", "Node js", "Sequelize", "Postgres SQL", "API REST", , "AWS s3", "Socket io", "Production"],
         isPrimary: false,
-        type: "Mobile app",
+        type: "project_lcr_type",
         platforms: ["Android", "IOS"],
-        stats: "5000+",
+        // platforms: ["project_lcr_platforms"],
+        stats: "project_lcr_stats",
         icon: HiOutlineDeviceMobile
     },
     {
-        title: "LCR PRO (B2B)",
-        description: "Un projet à fort impact, auquel Mouhamadou Sylla a contribué dans une démarche de produit complet, de la conception à la mise en production.",
+        title: "project_lcrpro_title",
+        description: "project_lcrpro_description",
         skills: ["Figma", "React Native", "Expo", "Google Auth", "Apple Auth", "Push Notifications", "Node js", "Sequelize", "Postgres SQL", "API REST", , "AWS s3", "Socket io", "Production"],
         isPrimary: true,
-        type: "Mobile app",
+        type: "project_lcrpro_type",
+        // platforms: ["project_lcrpro_platforms"],
         platforms: ["Android", "IOS"],
-        stats: "100+",
+        stats: "project_lcrpro_stats",
         icon: HiOutlineDeviceMobile
-
     },
     {
-        title: "Nexuroom",
-        description: "Un produit orienté utilisateur qui illustre une capacité à livrer rapidement des applications fiables et prêtes à évoluer.",
+        title: "project_nexuroom_title",
+        description: "project_nexuroom_description",
         skills: ["Figma", "React", "Tailwind CSS", "Responsivity", "i18next", "Node.js", "Prisma", "Postgres SQL", "API REST", "AWS s3"],
         isPrimary: false,
-        type: "Web app & web site",
+        type: "project_nexuroom_type",
         platforms: ["Web", "Mobile"],
-        stats: "2000+",
+        // platforms: ["project_nexuroom_platforms"],
+        stats: "project_nexuroom_stats",
         icon: MdOutlineLaptopChromebook,
     },
 ]

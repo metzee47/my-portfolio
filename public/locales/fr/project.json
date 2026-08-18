@@ -1,0 +1,34 @@
+{
+  "projects_section_title": "Réalisations",
+  "projects_mixed_first": "Des applications conçues pour être utilisées, puis faire ",
+  "projects_mixed_colored": " grandir",
+  "projects_mixed_last": " leur impact.",
+  "projects_intro_paragraph": "Deux produits livrés avec une approche full stack : rigueur d’architecture, expérience claire et livraison orientée production.",
+
+  "project_lcr_title": "LCR",
+  "project_lcr_description": "Un projet à fort impact, auquel Mouhamadou Sylla a contribué dans une démarche de produit complet, de la conception à la mise en production.",
+  "project_lcr_skills": "Figma · React Native · Expo · Google Auth · Apple Auth · Push Notifications · Node.js · Sequelize · Postgres SQL · API REST · AWS S3 · Socket.io · Production",
+  "project_lcr_type": "Application mobile",
+  "project_lcr_platforms": "Android · iOS",
+  "project_lcr_stats": "5000+",
+
+  "project_lcrpro_title": "LCR PRO (B2B)",
+  "project_lcrpro_description": "Un projet à fort impact, auquel Mouhamadou Sylla a contribué dans une démarche de produit complet, de la conception à la mise en production.",
+  "project_lcrpro_skills": "Figma · React Native · Expo · Google Auth · Apple Auth · Push Notifications · Node.js · Sequelize · Postgres SQL · API REST · AWS S3 · Socket.io · Production",
+  "project_lcrpro_type": "Application mobile",
+  "project_lcrpro_platforms": "Android · iOS",
+  "project_lcrpro_stats": "100+",
+
+  "project_nexuroom_title": "Nexuroom",
+  "project_nexuroom_description": "Un produit orienté utilisateur qui illustre une capacité à livrer rapidement des applications fiables et prêtes à évoluer.",
+  "project_nexuroom_skills": "Figma · React · Tailwind CSS · Responsivité · i18next · Node.js · Prisma · Postgres SQL · API REST · AWS S3",
+  "project_nexuroom_type": "Application web & site web",
+  "project_nexuroom_platforms": "Web · Mobile",
+  "project_nexuroom_stats": "2000+",
+
+  "projects_bottom_title": "Approche de livraison",
+  "projects_bottom_subtitle": "Construire vite, sans sacrifier la qualité.",
+  "projects_bottom_paragraph": "Des applications livrées dans des délais serrés, souvent entre trois et quatre mois, avec une attention constante portée au produit final.",
+  "projects_bottom_btn": "Échanger sur un projet",
+  "registered_users": "utilisateurs inscrits"
+}

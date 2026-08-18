@@ -1,0 +1,31 @@
+{
+  "contact_section_title": "ME CONTACTER",
+  "contact_mixed_first": "Une ",
+  "contact_mixed_colored": "idée",
+  "contact_mixed_last": " à rendre concrète ?",
+  "contact_intro_paragraph": "Parlons de votre prochain produit web ou mobile : architecture, interface, intégrations et livraison en production.",
+
+  "contact_gmail_title": "Gmail",
+  "contact_gmail_value": "contact_gmail_value",
+  "contact_tel_title": "Téléphone",
+  "contact_tel_value": "contact_tel_value",
+  "contact_linkedin_title": "LinkedIn",
+  "contact_linkedin_value": "contact_linkedin_value",
+  "contact_github_title": "GitHub",
+  "contact_github_value": "contact_github_value",
+  "contact_location_title": "Localisation",
+  "contact_location_value": "contact_location_value",
+
+  "contact_form_title": "Nouvel échange",
+  "contact_form_subtitle": "Décrivez votre besoin",
+  "contact_form_name_label": "Nom",
+  "contact_form_name_placeholder": "Votre nom",
+  "contact_form_email_label": "Email",
+  "contact_form_email_placeholder": "vous@entreprise.com",
+  "contact_form_subject_label": "Sujet",
+  "contact_form_subject_placeholder": "Application mobile, interface web, intégration",
+  "contact_form_message_label": "Message",
+  "contact_form_message_placeholder": "Contexte, enjeux, échéance",
+  "contact_form_btn": "Envoyer le message",
+  "contact_form_note": "L'envoi du message est en cours de développement, je vous invite à me contacter via les moyens de communication fournis dans la partie \"ME CONTACTER\" en cliquant dessus."
+}

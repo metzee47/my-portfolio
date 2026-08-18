@@ -1,0 +1,31 @@
+{
+  "contact_section_title": "CONTACT ME",
+  "contact_mixed_first": "An ",
+  "contact_mixed_colored": "idea",
+  "contact_mixed_last": " to bring to life?",
+  "contact_intro_paragraph": "Let’s talk about your next web or mobile product: architecture, interface, integrations, and production delivery.",
+
+  "contact_gmail_title": "Gmail",
+  "contact_gmail_value": "contact_gmail_value",
+  "contact_tel_title": "Phone",
+  "contact_tel_value": "contact_tel_value",
+  "contact_linkedin_title": "LinkedIn",
+  "contact_linkedin_value": "contact_linkedin_value",
+  "contact_github_title": "GitHub",
+  "contact_github_value": "contact_github_value",
+  "contact_location_title": "Location",
+  "contact_location_value": "contact_location_value",
+
+  "contact_form_title": "New exchange",
+  "contact_form_subtitle": "Describe your need",
+  "contact_form_name_label": "Name",
+  "contact_form_name_placeholder": "Your name",
+  "contact_form_email_label": "Email",
+  "contact_form_email_placeholder": "you@company.com",
+  "contact_form_subject_label": "Subject",
+  "contact_form_subject_placeholder": "Mobile app, web interface, integration",
+  "contact_form_message_label": "Message",
+  "contact_form_message_placeholder": "Context, challenges, deadline",
+  "contact_form_btn": "Send message",
+  "contact_form_note": "Message sending is under development, please contact me through the communication methods provided in the \"CONTACT ME\" section by clicking on them."
+}

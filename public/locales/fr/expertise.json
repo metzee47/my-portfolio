@@ -1,0 +1,62 @@
+{
+  "skills_section_title": "Savoir-faire",
+  "skills_mixed_first": "Une culture produit, soutenue par une ",
+  "skills_mixed_colored": "pratique technique ",
+  "skills_mixed_last": "complète.",
+  "skills_intro_paragraph": "Mouhamadou Sylla accompagne les produits web et mobiles de la maquette à la production, avec une attention rare pour le détail d’interface et la solidité des fondations.",
+  "skills_btn_secondary": "Voir le parcours",
+
+  "skill_frontend_name": "Frontend pixel-perfect",
+  "skill_frontend_description": "React.js, interfaces responsives et traduction fidèle de maquettes Figma.",
+  "skill_frontend_stacks": "React.js · Tailwind CSS",
+
+  "skill_backend_name": "Backend & API",
+  "skill_backend_description": "Node.js, Django etc. et API REST structurées selon une architecture MVC.",
+  "skill_backend_stacks": "Node.js · Django · Laravel · Spring Boot",
+
+  "skill_mobile_name": "Mobile natif",
+  "skill_mobile_description": "Applications mobiles fluides avec React Native, pensées pour les usages réels.",
+  "skill_mobile_stacks": "React Native",
+
+  "skill_integrations_name": "Intégrations sensibles",
+  "skill_integrations_description": "JWT, Google & Apple Auth, Stripe et temps réel avec Socket.io.",
+  "skill_integrations_stacks": "JWT · Google & Apple Auth · Stripe · Socket.io",
+
+  "tech_lead_title": "Technical Lead",
+  "tech_lead_paragraph": "Faire avancer une équipe avec exigence.",
+  "tech_lead_encadrement_title": "Encadrement",
+  "tech_lead_encadrement_description": "Gestion de huit stagiaires.",
+  "tech_lead_reviews_title": "Code reviews",
+  "tech_lead_reviews_description": "Une qualité partagée au quotidien.",
+  "tech_lead_pair_title": "Pair programming",
+  "tech_lead_pair_description": "Apprendre et résoudre ensemble.",
+
+  "experiences_section_title": "Parcours",
+  "experiences_mixed_first": "Concevoir, ",
+  "experiences_mixed_colored": "construire, ",
+  "experiences_mixed_last": "guider.",
+  "experiences_intro_paragraph": "Un parcours à la croisée du design d’interface, du développement full stack et du leadership technique.",
+
+  "experience_fullstack_title": "Développeur Full Stack - Tech Lead",
+  "experience_fullstack_description": "Définition d’architectures techniques, accompagnement d’une équipe de huit stagiaires, code reviews et pair programming pour faire progresser la qualité collective.",
+  "experience_fullstack_skills": "Architecture · Qualité · Transmission",
+
+  "experience_stage_vnb_title": "Frontend Developer · VNB-IT",
+  "experience_stage_vnb_description": "Développement d’interfaces responsives et travail frontend spécialisé, au service d’expériences cohérentes et prêtes pour la production.",
+  "experience_stage_vnb_skills": "React · Responsive · Tailwind CSS",
+
+  "experience_stage_fadesol_title": "UI Designer · Fadesol",
+  "experience_stage_fadesol_description": "Une pratique du design d’interface qui nourrit une capacité à livrer des intégrations précises et fidèles aux intentions de conception.",
+  "experience_stage_fadesol_skills": "UI/UX · Figma · Précision",
+
+  "experience_formation_title": "Formation en informatique",
+  "experience_formation_description": "Un socle académique complété par une pratique continue du développement web et mobile, du design d’interface et de l’architecture applicative.",
+  "experience_formation_skills": "Apprentissage continu",
+
+  "gorilla_signature_title": "Signature technique Gorilla",
+  "gorilla_signature_subtitle": "Un niveau confirmé en CSS et en intégration responsive.",
+  "gorilla_signature_css": "Maîtrise avancée en CSS (98%), garantissant des interfaces précises et maintenables.",
+  "gorilla_signature_react": "Maîtrise avancée en React (80%) pour concevoir des applications dynamiques.",
+  "gorilla_signature_node": "Maîtrise avancée en Node.js (78%) pour développer des logiques backend fiables et performantes.",
+  "gorilla_signature_btn": "Travaillons ensemble"
+}

@@ -1,4 +1,5 @@
 import { MENU_ITEMS } from "@/constant/menuConstant";
+import i18next from "i18next";
 import { createContext, useContext, useEffect, useState } from "react";
 
 
@@ -18,7 +19,7 @@ const HTML = document.documentElement;
 
 export default function AppProvider({ children }) {
 
-    const [lang, setLang] = useState("en");
+    const [lang, setLang] = useState(i18next.language);
     const [activeMenu, setActiveMenu] = useState(MENU_ITEMS.home);
     const [isMenuOpen, setIsMenuOpen] = useState(false)
     const [theme, setTheme] = useState('dark');
@@ -56,9 +57,19 @@ export default function AppProvider({ children }) {
 
 
     // lang handling
-    // TODO
+    const toggleLang = () => {
+        const currentLang = lang || i18next.language
+        const newLang = currentLang === 'fr' ? 'en' : 'fr'
+        setLang(newLang)
+        i18next.changeLanguage(newLang)
+    }
 
-
+    const langValues = {
+        lang,
+        toggleLang,
+        isCurrentLangFR: lang === 'fr',
+        isCurrentLangEN: lang === 'en',
+    }
 
 
     // menu handling
@@ -80,7 +91,7 @@ export default function AppProvider({ children }) {
     const menuValues = { activeMenu, toggleMenu, isMenuItemActive, isMenuOpen, toggleOpenMenu }
 
     return (
-        <LangContext.Provider>
+        <LangContext.Provider value={langValues}>
             <ThemeContext.Provider value={themeValues}>
                 <MenuContext.Provider value={menuValues}>
                     {children}

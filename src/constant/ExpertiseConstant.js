@@ -6,10 +6,12 @@ import { PiStudentFill } from "react-icons/pi";
 import { FaCode } from "react-icons/fa6";
 import { BsPcDisplayHorizontal } from "react-icons/bs";
 
+
 export const SKILLS = [
     {
-        name: "Frontend pixel-perfect",
-        description: "React.js, interfaces responsives et traduction fidèle de maquettes Figma.",
+        name: "skill_frontend_name",
+        description: "skill_frontend_description",
+        // stacks: ["skill_frontend_stacks"],
         stacks: [
             "React.js", "Tailwind CSS"
         ],
@@ -17,8 +19,9 @@ export const SKILLS = [
         isPrimary: true,
     },
     {
-        name: "Backend & API",
-        description: "Node.js, Django etc.. et API REST structurées selon une architecture MVC.",
+        name: "skill_backend_name",
+        description: "skill_backend_description",
+        // stacks: ["skill_backend_stacks"],
         stacks: [
             "Node.js", "Django", "Laravel", "Spring Boot"
         ],
@@ -26,8 +29,9 @@ export const SKILLS = [
         isPrimary: false,
     },
     {
-        name: "Mobile natif",
-        description: "Applications mobiles fluides avec React Native, pensées pour les usages réels.",
+        name: "skill_mobile_name",
+        description: "skill_mobile_description",
+        // stacks: ["skill_mobile_stacks"],
         stacks: [
             "React Native"
         ],
@@ -35,55 +39,48 @@ export const SKILLS = [
         isPrimary: false,
     },
     {
-
-        name: "Intégrations sensibles",
-        description: "JWT, Google & Apple Auth, Stripe et temps réel avec Socket.io.",
+        name: "skill_integrations_name",
+        description: "skill_integrations_description",
         stacks: [
             "JWT", "Google & Apple Auth", "Stripe", "Socket.io"
         ],
+        // stacks: ["skill_integrations_stacks"],
         icon: RiSecurePaymentFill,
         isPrimary: true,
     }
 ]
 
-
-
 export const EXPERIENCES = [
     {
         type: "EXPERIENCE",
         icon: BsPcDisplayHorizontal,
-        title: "Développeur Full Stack - Tech Lead",
-        description: "Définition d’architectures techniques, accompagnement d’une équipe de huit stagiaires, code reviews et pair programming pour faire progresser la qualité collective.",
-        skills: "ARCHITECTURE · QUALITÉ · TRANSMISSION",
+        title: "experience_fullstack_title",
+        description: "experience_fullstack_description",
+        skills: "experience_fullstack_skills",
         isPrimary: false
-
     },
     {
         type: "STAGE",
         icon: FaCode,
-        title: "Frontend Developer · VNB-IT",
-        description: "Développement d’interfaces responsives et travail frontend spécialisé, au service d’expériences cohérentes et prêtes pour la production.",
-        skills: "REACT · RESPONSIVE · TAILWIND CSS",
+        title: "experience_stage_vnb_title",
+        description: "experience_stage_vnb_description",
+        skills: "experience_stage_vnb_skills",
         isPrimary: true
-
     },
     {
         type: "STAGE",
         icon: FaCode,
-        title: "UI Designer · Fadesol",
-        description: "Une pratique du design d’interface qui nourrit une capacité à livrer des intégrations précises et fidèles aux intentions de conception.",
-        skills: "UI/UX · FIGMA · PRÉCISION",
+        title: "experience_stage_fadesol_title",
+        description: "experience_stage_fadesol_description",
+        skills: "experience_stage_fadesol_skills",
         isPrimary: true
-
     },
-    
     {
         type: "FORMATION",
         icon: PiStudentFill,
-        title: "Formation en informatique",
-        description: "Un socle académique complété par une pratique continue du développement web et mobile, du design d’interface et de l’architecture applicative.",
-        skills: "APPRENTISSAGE CONTINU",
+        title: "experience_formation_title",
+        description: "experience_formation_description",
+        skills: "experience_formation_skills",
         isPrimary: false
-
     }
 ]
