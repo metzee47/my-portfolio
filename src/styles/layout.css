@@ -120,10 +120,26 @@ nav.menu {
 }
 
 
+
+
+
+/* Main */
+main.main{
+    margin-top: max(63px, 5.2vw);
+    padding: var(--mega-gap) var(--giga-gap);
+}
+
+
 @media (max-width:726px) {
 
     header.header.open {
         align-items: flex-start;
+        height: 220px;
+
+    }
+
+    main.main.open{
+        margin-top: 220px;
     }
 
     .menu .menu-hamburger {
@@ -153,6 +169,8 @@ nav.menu {
     nav.menu {
         flex: 1;
     }
+
+    
 }
 
 @media (max-width:424px) {
@@ -162,8 +180,3 @@ nav.menu {
 }
 
 
-/* Main */
-main.main{
-    margin-top: max(63px, 5.2vw);
-    padding: var(--mega-gap) var(--giga-gap);
-}
