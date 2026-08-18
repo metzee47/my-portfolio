@@ -35,7 +35,7 @@ chore → tâches diverses (build, config, dépendances…)
 
 
 FOLLOWING STEP
-1/ fix header, handle active menu item, add footer : dont forget hooks betwwen page
+1/ fix header, add footer
 
 2/ Pages responsivity
 

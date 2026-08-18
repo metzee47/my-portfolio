@@ -5,7 +5,7 @@ import '@/styles/layout.css'
 
 export default function MainLayout({activeMenu, children}) {
     return (
-        <div>
+        <div className="main-layout">
             <Header activeItem={activeMenu}/>
             <main className="main">
                 {children}

@@ -4,6 +4,7 @@
   --secondary: #40E0D0;
 
   --bg: #10131A;
+  --header-bg: #0C0F15;
   --p-text: #9DA8BA;
   --head-text: #F4F7FB;
   --head-text-sec: #E6EAF2;
@@ -44,11 +45,12 @@
   --secondary: #1E3A8A;
 
   --bg: #F8FAFC;
+  --header-bg: #fff;
   --p-text: #64748B;
   --head-text: #10131A;
   --head-text-sec: #1E293B;
 
-  --bg-card: #FFFFFF;
+  --bg-card: #fff;
   --bg-card-sec: #E2E8F0;
   --bg-card-ter: #F1F5F9;
   --border: #E2E8F0;
