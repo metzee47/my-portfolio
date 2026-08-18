@@ -7,10 +7,14 @@ import "@/styles/expertise.css"
 import { LuUsersRound } from "react-icons/lu";
 import { FaCheck } from "react-icons/fa6";
 import { IoChatbubbleOutline } from "react-icons/io5";
+import { MENU_ITEMS } from "@/constant/menuConstant";
 
 export default function Expertise () {
     return (
-        <MainLayout>
+        <MainLayout
+            activeMenu={MENU_ITEMS.expertise}
+        
+        >
 
             {/* skills */}
             <section className="skills flex-center">

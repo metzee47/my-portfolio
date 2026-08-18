@@ -10,6 +10,7 @@ import { CONTACT } from "@/constant/ContactConstant";
 import { PrimaryButton } from "@/components/Button";
 import { BsSend } from "react-icons/bs";
 import "@/styles/contact.css"
+import { MENU_ITEMS } from "@/constant/menuConstant";
 
 
 export default function Contact () {
@@ -38,7 +39,10 @@ export default function Contact () {
     
 
     return (
-        <MainLayout>
+        <MainLayout
+            activeMenu={MENU_ITEMS.contact}
+        
+        >
 
             <div className="contact flex-center">
 

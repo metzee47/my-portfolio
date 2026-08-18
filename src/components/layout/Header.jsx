@@ -8,7 +8,7 @@ import { useMenu, useTheme } from '@/context/AppContext';
 import { MENU } from '@/constant/menuConstant';
 import { Link } from 'react-router-dom';
 
-const Header = () => {
+const Header = ({activeItem}) => {
 
     const {isDark, toggleTheme} = useTheme()
     const {isMenuItemActive, toggleMenu, isMenuOpen, toggleOpenMenu} = useMenu()
@@ -36,11 +36,10 @@ const Header = () => {
                     <ul className='nav-menu flex-center'>
                         {
                             MENU.map((item, index) => (
-                                <li key={index}>
+                                <li key={index} onClick={() => toggleMenu(item.label)}>
                                     <Link 
                                         to={`${item.href}`}
-                                        className={`${isMenuItemActive(item.label) ? 'active' : ''}`}
-                                        onClick={() => toggleMenu(item.label)}
+                                        className={`${isMenuItemActive(activeItem, item.label) ? 'active' : ''}`}
                                     >
                                         {item.label}
                                     </Link>

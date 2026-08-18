@@ -3,10 +3,10 @@ import Header from "./Header";
 import { Outlet } from "react-router-dom";
 import '@/styles/layout.css'
 
-export default function MainLayout({children}) {
+export default function MainLayout({activeMenu, children}) {
     return (
         <div>
-            <Header />
+            <Header activeItem={activeMenu}/>
             <main className="main">
                 {children}
                 <Outlet />

@@ -1,5 +1,5 @@
 import { MENU_ITEMS } from "@/constant/menuConstant";
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 
 // context creation
@@ -16,7 +16,7 @@ export const useLang = () => useContext(LangContext);
 // provider definition
 const HTML = document.documentElement;
 
-export default function AppProvider({children}){
+export default function AppProvider({ children }) {
 
     const [lang, setLang] = useState("en");
     const [activeMenu, setActiveMenu] = useState(MENU_ITEMS.home);
@@ -37,11 +37,21 @@ export default function AppProvider({children}){
 
     // theme values
     const themeValues = {
-        theme, 
-        toggleTheme, 
-        isDark: theme === 'dark', 
+        theme,
+        toggleTheme,
+        isDark: theme === 'dark',
         isLight: theme === 'light'
     }
+
+    // get html data-theme
+    useEffect(() => {
+        const currentTheme = HTML.getAttribute('data-theme');
+        if (currentTheme) {
+            setTheme(currentTheme);
+        } else {
+            HTML.setAttribute('data-theme', theme);
+        }
+    }, []);
 
 
 
@@ -57,8 +67,8 @@ export default function AppProvider({children}){
     }
 
     // toggle item activity
-    const isMenuItemActive = (item) => {
-        return item === activeMenu
+    const isMenuItemActive = (currentActive, item) => {
+        return currentActive === item
     }
 
     // toggle menu collapsing
@@ -67,7 +77,7 @@ export default function AppProvider({children}){
         setIsMenuOpen(newState)
     }
 
-    const menuValues = {activeMenu, toggleMenu, isMenuItemActive, isMenuOpen, toggleOpenMenu}
+    const menuValues = { activeMenu, toggleMenu, isMenuItemActive, isMenuOpen, toggleOpenMenu }
 
     return (
         <LangContext.Provider>

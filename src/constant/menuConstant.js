@@ -1,19 +1,21 @@
+import { contactLink, expertiseLink, homeLink, projectLink } from '@/routes/links'
+
 export const MENU = [
     {
         label: "Accueil",
-        href: ""
+        href: homeLink,
     },
     {
         label: "Projets",
-        href: "projects"
+        href: projectLink
     },
     {
         label: "Expertise",
-        href: "experiences-and-formations"
+        href: expertiseLink
     },
     {
         label: "Contact",
-        href: "contact"
+        href: contactLink
     }
 ]
 

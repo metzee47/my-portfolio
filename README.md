@@ -29,3 +29,14 @@ refactor → amélioration du code sans ajout de fonctionnalité
 test → ajout ou modification de tests
 
 chore → tâches diverses (build, config, dépendances…)
+
+
+
+
+
+FOLLOWING STEP
+1/ fix header, handle active menu item, add footer : dont forget hooks betwwen page
+
+2/ Pages responsivity
+
+3/ Traduction

@@ -39,8 +39,8 @@
 }
 
 
-[data-theme="dark"] {
-    --primary: #8FBC8F;
+[data-theme="light"] {
+  --primary: #8FBC8F;
   --secondary: #1E3A8A;
 
   --bg: #F8FAFC;

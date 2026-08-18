@@ -7,10 +7,13 @@ import "@/styles/home.css"
 import { IoArrowForward } from "react-icons/io5";
 import { GoArrowUpRight } from "react-icons/go";
 import { Card } from "@/components/Card";
+import { MENU_ITEMS } from "@/constant/menuConstant";
 
 export default function Home () {
     return (
-        <MainLayout>
+        <MainLayout
+            activeMenu={MENU_ITEMS.home}
+        >
 
             {/* top section */}
             <section className="introduce-myself flex-center">

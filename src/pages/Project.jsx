@@ -2,6 +2,7 @@ import { PrimaryButton } from "@/components/Button";
 import { Card } from "@/components/Card";
 import MainLayout from "@/components/layout/MainLayout";
 import { MixedText } from "@/components/MixedText";
+import { MENU_ITEMS } from "@/constant/menuConstant";
 import { PROJECTS } from "@/constant/ProjectConstant";
 import "@/styles/project.css"
 
@@ -9,7 +10,10 @@ import "@/styles/project.css"
 
 export default function Project() {
     return (
-        <MainLayout>
+        <MainLayout
+            activeMenu={MENU_ITEMS.projects}
+            
+        >
             {/* top section */}
             <section className="projects-top-section flex">
                 <span className="text-secondary">REALISATIONS</span>
