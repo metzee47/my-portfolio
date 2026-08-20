@@ -7,6 +7,8 @@ import { PROJECTS } from "@/constant/ProjectConstant";
 import { useNavRedirecting } from "@/hooks/useNavRedirecting";
 import { useTranslate } from "@/hooks/useTranslation";
 import "@/styles/project.css"
+import "@/styles/expertise.css"
+
 
 
 export default function Project() {
