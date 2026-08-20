@@ -10,6 +10,7 @@ import { IoChatbubbleOutline } from "react-icons/io5";
 import { MENU_ITEMS } from "@/constant/menuConstant";
 import { useTranslate } from "@/hooks/useTranslation";
 import { useNavRedirecting } from "@/hooks/useNavRedirecting";
+import { Section } from "@/components/Section";
 
 
 export default function Expertise () {
@@ -81,44 +82,47 @@ export default function Expertise () {
                 </div>
             </Card>
 
+
             {/* Experiences */}
-            <section className="formations flex" id="expertise-journey">
-                <div className="top-sections">
-                    <span className="text-secondary">{te("experiences_section_title")}</span>
-                    <MixedText
-                        firstPart={te("experiences_mixed_first")}
-                        coloredPart={te("experiences_mixed_colored")}
-                        lastPart={te("experiences_mixed_last")}
-                    />
-                    <p>{te("experiences_intro_paragraph")}</p>
-                </div>
+            <Section>
+                <section className="formations flex" id="expertise-journey">
+                    <div className="top-sections">
+                        <span className="text-secondary">{te("experiences_section_title")}</span>
+                        <MixedText
+                            firstPart={te("experiences_mixed_first")}
+                            coloredPart={te("experiences_mixed_colored")}
+                            lastPart={te("experiences_mixed_last")}
+                        />
+                        <p>{te("experiences_intro_paragraph")}</p>
+                    </div>
 
-                <div className="experiences-wrapper flex">
-                    {
-                        EXPERIENCES.map((item, index) => (
-                            <ExperienceCardItem key={index} item={item}/>
-                        ))  
-                    }
-                </div>
-            </section>
+                    <div className="experiences-wrapper flex">
+                        {
+                            EXPERIENCES.map((item, index) => (
+                                <ExperienceCardItem key={index} item={item}/>
+                            ))  
+                        }
+                    </div>
+                </section>
 
-            <Card className="gorilla-skills flex-center">
-                <div className="text-part flex">
-                    <span className="text-primary">{te("gorilla_signature_title")}</span>
-                    <h6>{te("gorilla_signature_subtitle")}</h6>
-                    <p>
-                        <p>{te("gorilla_signature_css")}</p>
-                        <p>{te("gorilla_signature_react")}</p>
-                        <p>{te("gorilla_signature_node")}</p>
-                    </p>
-                </div>
+                <Card className="gorilla-skills flex-center">
+                    <div className="text-part flex">
+                        <span className="text-primary">{te("gorilla_signature_title")}</span>
+                        <h6>{te("gorilla_signature_subtitle")}</h6>
+                        <p>
+                            <p>{te("gorilla_signature_css")}</p>
+                            <p>{te("gorilla_signature_react")}</p>
+                            <p>{te("gorilla_signature_node")}</p>
+                        </p>
+                    </div>
 
-                <PrimaryButton
-                    onClick={gotoContact}
-                >
-                    {te("gorilla_signature_btn")}
-                </PrimaryButton>
-            </Card>
+                    <PrimaryButton
+                        onClick={gotoContact}
+                    >
+                        {te("gorilla_signature_btn")}
+                    </PrimaryButton>
+                </Card>
+            </Section>
         </MainLayout>
     )
 }

@@ -10,13 +10,13 @@ import { CONTACT } from "@/constant/ContactConstant";
 import { PrimaryButton } from "@/components/Button";
 import { BsSend } from "react-icons/bs";
 import emailjs from "@emailjs/browser"
-import { BiLoaderCircle } from "react-icons/bi"
 import "@/styles/contact.css"
 import { MENU_ITEMS } from "@/constant/menuConstant";
 import { useTranslate } from "@/hooks/useTranslation";
 import { openLink } from "@/lib/projects";
 import { contactFormValidator } from "@/validators/contact";
 import { useState } from "react";
+import { PulseLoader } from "react-spinners";
 
 const pkey = import.meta.env.VITE_EMAIL_PUBLIC_KEY
 const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID
@@ -187,10 +187,11 @@ export default function Contact() {
 
                         <PrimaryButton
                             onClick={sendEmail}
+                            forwardIcon={!loading}
                         >
                             {
                                 loading ?
-                                    <BiLoaderCircle /> :
+                                    <PulseLoader color="var(--head-text)" size={8}/> :
                                     tc("contact_form_btn")
                             }
                         </PrimaryButton>
