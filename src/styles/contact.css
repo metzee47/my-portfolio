@@ -124,6 +124,12 @@ form p.success{
         flex-direction: column;
     }
 
+    .contact .left-part,
+    .contact .right-part
+    {
+        width: 100%;;
+    }
+
     .left-part .contact-item-wrapper{
         grid-template-columns: 1fr 1fr;
     }
