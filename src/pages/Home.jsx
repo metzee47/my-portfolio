@@ -81,26 +81,24 @@ export default function Home () {
             </section>
 
             {/* middle section */}
-            <Section>
-                <section className="step-item-wrapper flex">
-                    <StepItem
-                        title={th("step_item_01_title")}
-                        description={th("step_item_01_description")}
-                        subDescription={th("step_item_01_subdescription")}
-                    />
-                    <StepItem
-                        titlePrimary
-                        title={th("step_item_02_title")}
-                        description={th("step_item_02_description")}
-                        subDescription={th("step_item_02_subdescription")}
-                    />
-                    <StepItem
-                        title={th("step_item_03_title")}
-                        description={th("step_item_03_description")}
-                        subDescription={th("step_item_03_subdescription")}
-                    />
-                </section>
-            </Section>
+            <section className="step-item-wrapper flex">
+                <StepItem
+                    title={th("step_item_01_title")}
+                    description={th("step_item_01_description")}
+                    subDescription={th("step_item_01_subdescription")}
+                />
+                <StepItem
+                    titlePrimary
+                    title={th("step_item_02_title")}
+                    description={th("step_item_02_description")}
+                    subDescription={th("step_item_02_subdescription")}
+                />
+                <StepItem
+                    title={th("step_item_03_title")}
+                    description={th("step_item_03_description")}
+                    subDescription={th("step_item_03_subdescription")}
+                />
+            </section>
 
             {/* projects section */}
             <Section>
