@@ -1,5 +1,6 @@
 import { MdOutlineLaptopChromebook } from "react-icons/md";
 import { HiOutlineDeviceMobile } from "react-icons/hi";
+import { openLCR, openLCRPro, openNexuroom, openVoidMA } from "@/lib/projects";
 
 export const PROJECTS = [
     {
@@ -11,7 +12,8 @@ export const PROJECTS = [
         platforms: ["Android", "IOS"],
         // platforms: ["project_lcr_platforms"],
         stats: "project_lcr_stats",
-        icon: HiOutlineDeviceMobile
+        icon: HiOutlineDeviceMobile,
+        openApp: openLCR,
     },
     {
         title: "project_lcrpro_title",
@@ -22,17 +24,32 @@ export const PROJECTS = [
         // platforms: ["project_lcrpro_platforms"],
         platforms: ["Android", "IOS"],
         stats: "project_lcrpro_stats",
-        icon: HiOutlineDeviceMobile
+        icon: HiOutlineDeviceMobile,
+        openApp: openLCRPro,
     },
     {
         title: "project_nexuroom_title",
         description: "project_nexuroom_description",
         skills: ["Figma", "React", "Tailwind CSS", "Responsivity", "i18next", "Node.js", "Prisma", "Postgres SQL", "API REST", "AWS s3"],
-        isPrimary: false,
+        isPrimary: true,
         type: "project_nexuroom_type",
-        platforms: ["Web", "Mobile"],
+        platforms: ["project_nexuroom_platform1", "project_nexuroom_platform2"],
         // platforms: ["project_nexuroom_platforms"],
         stats: "project_nexuroom_stats",
         icon: MdOutlineLaptopChromebook,
+        openApp: openNexuroom,
+    },
+    {
+        title: "project_voidma_title",
+        description: "project_voidma_description",
+        skills: ["Figma", "React", "Responsivity"],
+        isPrimary: false,
+        type: "project_voidma_type",
+        platforms: ["project_voidma_platforms"],
+        // platforms: ["project_voidma_platforms"],
+        stats: "project_voidma_stats",
+        icon: MdOutlineLaptopChromebook,
+        openApp: openVoidMA,
     },
 ]
+

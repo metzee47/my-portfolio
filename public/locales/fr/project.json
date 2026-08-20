@@ -13,7 +13,7 @@
   "project_lcr_stats": "5000+",
 
   "project_lcrpro_title": "LCR PRO (B2B)",
-  "project_lcrpro_description": "Un projet à fort impact, auquel Mouhamadou Sylla a contribué dans une démarche de produit complet, de la conception à la mise en production.",
+  "project_lcrpro_description": "Une solution B2B à fort impact, développée avec une approche produit complète par Mouhamadou Sylla, de la conception à la mise en production, pour répondre aux besoins des entreprises.",
   "project_lcrpro_skills": "Figma · React Native · Expo · Google Auth · Apple Auth · Push Notifications · Node.js · Sequelize · Postgres SQL · API REST · AWS S3 · Socket.io · Production",
   "project_lcrpro_type": "Application mobile",
   "project_lcrpro_platforms": "Android · iOS",
@@ -23,12 +23,20 @@
   "project_nexuroom_description": "Un produit orienté utilisateur qui illustre une capacité à livrer rapidement des applications fiables et prêtes à évoluer.",
   "project_nexuroom_skills": "Figma · React · Tailwind CSS · Responsivité · i18next · Node.js · Prisma · Postgres SQL · API REST · AWS S3",
   "project_nexuroom_type": "Application web & site web",
-  "project_nexuroom_platforms": "Web · Mobile",
+  "project_nexuroom_platform1": "App web",
+  "project_nexuroom_platform2": "Site web",
   "project_nexuroom_stats": "2000+",
+  
+  "project_voidma_title": "Void MA",
+  "project_voidma_description": "Un site web 'demo' réalisé suite à un entretien technique.",
+  "project_voidma_skills": "Figma · React · Responsivité",
+  "project_voidma_type": "Site web",
+  "project_voidma_platforms": "Site web",
+  "project_voidma_stats": "Aucun",
 
   "projects_bottom_title": "Approche de livraison",
   "projects_bottom_subtitle": "Construire vite, sans sacrifier la qualité.",
   "projects_bottom_paragraph": "Des applications livrées dans des délais serrés, souvent entre trois et quatre mois, avec une attention constante portée au produit final.",
   "projects_bottom_btn": "Échanger sur un projet",
-  "registered_users": "utilisateurs inscrits"
+  "registered_users": "utilisateur(s) inscrit(s)"
 }

@@ -13,7 +13,7 @@
   "project_lcr_stats": "5000+",
 
   "project_lcrpro_title": "LCR PRO (B2B)",
-  "project_lcrpro_description": "A high-impact project to which Mouhamadou Sylla contributed with a complete product approach, from design to production.",
+  "project_lcrpro_description": "A high-impact B2B solution, developed with a complete product approach by Mouhamadou Sylla, from design to production, tailored to meet business needs.",
   "project_lcrpro_skills": "Figma · React Native · Expo · Google Auth · Apple Auth · Push Notifications · Node.js · Sequelize · Postgres SQL · REST API · AWS S3 · Socket.io · Production",
   "project_lcrpro_type": "Mobile application",
   "project_lcrpro_platforms": "Android · iOS",
@@ -23,8 +23,16 @@
   "project_nexuroom_description": "A user-oriented product that demonstrates the ability to quickly deliver reliable and scalable applications.",
   "project_nexuroom_skills": "Figma · React · Tailwind CSS · Responsiveness · i18next · Node.js · Prisma · Postgres SQL · REST API · AWS S3",
   "project_nexuroom_type": "Web application & website",
-  "project_nexuroom_platforms": "Web · Mobile",
+  "project_nexuroom_platform1": "Web app",
+  "project_nexuroom_platform2": "Website",
   "project_nexuroom_stats": "2000+",
+
+  "project_voidma_title": "Void MA",
+  "project_voidma_description": "A 'demo' website created following a technical interview.",
+  "project_voidma_skills": "Figma · React · Responsiveness",
+  "project_voidma_type": "Website",
+  "project_voidma_platforms": "Website",
+  "project_voidma_stats": "None",
 
   "projects_bottom_title": "Delivery approach",
   "projects_bottom_subtitle": "Build fast, without sacrificing quality.",

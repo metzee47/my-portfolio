@@ -4,62 +4,18 @@ import MainLayout from "@/components/layout/MainLayout";
 import { MixedText } from "@/components/MixedText";
 import { MENU_ITEMS } from "@/constant/menuConstant";
 import { PROJECTS } from "@/constant/ProjectConstant";
+import { useNavRedirecting } from "@/hooks/useNavRedirecting";
 import { useTranslate } from "@/hooks/useTranslation";
 import "@/styles/project.css"
 
 
-
-// export default function Project() {
-//     return (
-//         <MainLayout
-//             activeMenu={MENU_ITEMS.projects}
-            
-//         >
-//             {/* top section */}
-//             <section className="projects-top-section flex">
-//                 <span className="text-secondary">REALISATIONS</span>
-//                 <MixedText
-//                     firstPart={'Des applications conçues pour être utilisées, puis faire '}
-//                     coloredPart={' grandir'}
-//                     lastPart={' leur impact.'}
-//                 />
-//                 <p>Deux produits livrés avec une approche full stack : rigueur d’architecture, expérience claire et livraison orientée production.</p>
-//             </section>
-
-//             {/* projects */}
-//             <sections className="projects-wrapper">
-//                 {
-//                     PROJECTS.map(project => (
-//                         <ProjectCardItem key={project.title} item={project} />
-//                     ))
-//                 }
-//             </sections>
-
-//             {/* bottom part */}
-//             <Card
-//                 className="projects-btm-part gorilla-skills flex-center"
-//             >
-//                 <div className="text-part flex">
-//                     <span className="text-primary">APPROCHE DE LIVRAISON</span>
-//                     <h6>Construire vite, sans sacrifier la qualité.</h6>
-//                     <p>
-//                         Des applications livrées dans des délais serrés, souvent entre trois et quatre mois, avec une attention constante portée au produit final.
-//                     </p>
-//                 </div>
-
-//                 <PrimaryButton>
-//                     Echanger sur un projet
-//                 </PrimaryButton>
-
-
-
-//             </Card>
-//         </MainLayout>
-//     )
-// }
-
 export default function Project() {
+    // translation hook
     const {tp} = useTranslate()
+
+    // redirection hook
+    const {gotoContact} = useNavRedirecting()
+
     return (
         <MainLayout
             activeMenu={MENU_ITEMS.projects}
@@ -92,7 +48,9 @@ export default function Project() {
                     <p>{tp("projects_bottom_paragraph")}</p>
                 </div>
 
-                <PrimaryButton>
+                <PrimaryButton
+                    onClick={gotoContact}
+                >
                     {tp("projects_bottom_btn")}
                 </PrimaryButton>
             </Card>
@@ -103,12 +61,14 @@ export default function Project() {
 
 
 const ProjectCardItem = ({ item }) => {
+    // translation hook
     const {tp} = useTranslate()
 
     return (
     <Card
         primaryAnimation={false}
         className={"project-card-item"}
+        onClick={item.openApp}
     >
         <Card
             primaryAnimation={item.isPrimary}

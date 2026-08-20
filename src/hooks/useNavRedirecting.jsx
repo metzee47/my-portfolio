@@ -3,7 +3,17 @@ import { contactLink, expertiseLink, homeLink, projectLink } from '@/routes/link
 
 export const useNavRedirecting = () => {
 
-    const navigate = useNavigate();
+    // router init
+    const router = useNavigate();
+
+
+    // navigation helper
+    const navigate = (link) => {
+        router(link)
+
+        // scroll to top
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    }
 
     // home 
     const gotoHome = () => navigate(homeLink)
@@ -20,7 +30,12 @@ export const useNavRedirecting = () => {
     const gotoExpertise = () => navigate(expertiseLink)
 
 
+    // helper main
+    const goto = (link) => navigate(link)
+
+
     return {
+        goto, // main helper
         gotoContact, // contact
         gotoExpertise, // expertise 
         gotoHome, // home 
