@@ -27,5 +27,9 @@
   "contact_form_message_label": "Message",
   "contact_form_message_placeholder": "Contexte, enjeux, échéance",
   "contact_form_btn": "Envoyer le message",
-  "contact_form_note": "L'envoi du message est en cours de développement, je vous invite à me contacter via les moyens de communication fournis dans la partie \"ME CONTACTER\" en cliquant dessus."
+  "contact_form_note": "L'envoi du message est en cours de développement, je vous invite à me contacter via les moyens de communication fournis dans la partie \"ME CONTACTER\" en cliquant dessus.",
+  "invalid_email": "L'adresse email n'est pas valide.",
+  "required_field": "Ce champ est requis.",
+  "contact_form_success": "Message reçu avec succès, je vous répondrai dans les plus brefs délais !",
+  "contact_form_error": "Une erreur est survenue, je vous invite à me contacter via les moyens de communication fournis dans la partie \"ME CONTACTER\" en cliquant dessus."
 }

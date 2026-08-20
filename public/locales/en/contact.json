@@ -27,5 +27,9 @@
   "contact_form_message_label": "Message",
   "contact_form_message_placeholder": "Context, challenges, deadline",
   "contact_form_btn": "Send message",
-  "contact_form_note": "Message sending is under development, please contact me through the communication methods provided in the \"CONTACT ME\" section by clicking on them."
+  "contact_form_note": "Message sending is under development, please contact me through the communication methods provided in the \"CONTACT ME\" section by clicking on them.",
+  "invalid_email": "The email address is invalid.",
+  "required_field": "This field is required.",
+  "contact_form_success": "Message received successfully, I will respond to you as soon as possible!",
+  "contact_form_error": "An error occurred, please contact me through the communication methods provided in the \"CONTACT ME\" section by clicking on them."
 }

@@ -2,6 +2,8 @@
   /* dark by default */
   --primary: #1E3A8A;
   --secondary: #40E0D0;
+  --error: #EF4444;
+  --success: #22C55E;
 
   --bg: #10131A;
   --header-bg: #0C0F15;
@@ -46,6 +48,8 @@
 [data-theme="light"] {
   --primary: #8FBC8F;
   --secondary: #1E3A8A;
+  --error: #EF4444;
+  --success: #22C55E;
 
   --bg: #F8FAFC;
   --header-bg: #fff;

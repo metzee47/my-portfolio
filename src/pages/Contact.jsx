@@ -9,139 +9,83 @@ import { IoLocationSharp } from "react-icons/io5";
 import { CONTACT } from "@/constant/ContactConstant";
 import { PrimaryButton } from "@/components/Button";
 import { BsSend } from "react-icons/bs";
+import emailjs from "@emailjs/browser"
+import { BiLoaderCircle } from "react-icons/bi"
 import "@/styles/contact.css"
 import { MENU_ITEMS } from "@/constant/menuConstant";
 import { useTranslate } from "@/hooks/useTranslation";
+import { openLink } from "@/lib/projects";
+import { contactFormValidator } from "@/validators/contact";
+import { useState } from "react";
+
+const pkey = import.meta.env.VITE_EMAIL_PUBLIC_KEY
+const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID
+const templateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID
 
 
-// export default function Contact () {
+export default function Contact() {
 
-//     // ----------------------- contact click handling start
+    //translation hook
+    const { tc } = useTranslate()
 
-//     const handleGmailClick = () => {
-//         window.open(`mailto:${CONTACT.GMAIL}`, '_blank');
-//     };
+    //states
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        message: '',
+        subject: '',
+    })
+    const [hasSent, setHasSent] = useState({})
+    const [errors, setErrors] = useState({})
+    const [loading, setLoading] = useState(false)
 
-//     const handleTelClick = () => {
-//         window.open(`tel:${CONTACT.TEL}`, '_blank');
-//     };
+    // update formData
+    const updateData = e => setFormData(data => ({ ...data, [e.target.name]: e.target.value }))
 
-//     const handleLinkedinClick = () => {
-//         window.open(CONTACT.LINKEDIN, '_blank');
-//     };
+    // send email
+    const sendEmail = (e) => {
 
-//     const handleGithubClick = () => {
-//         window.open(CONTACT.GITHUB, '_blank');
-//     };
+        e.preventDefault()
+        setErrors({})
+        setHasSent({})
 
-//     // contact click handling end --------------------
+        // validate formData
+        const { errors, isValid } = contactFormValidator(formData.email, formData.name, formData.subject, formData.message)
 
+        setErrors(errors)
 
-    
+        if (isValid) {
 
-//     return (
-//         <MainLayout
-//             activeMenu={MENU_ITEMS.contact}
-        
-//         >
+            setLoading(true)
 
-//             <div className="contact flex-center">
+            emailjs.send(
+                serviceId,
+                templateId,
+                {
+                    name: formData.name,
+                    email: formData.email,
+                    message: formData.message,
+                    subject: formData.subject
+                },
+                pkey
+            ).then(
+                () => {
+                    setHasSent({ state: 'yes' })
+                    setFormData({
+                        name: '',
+                        email: '',
+                        message: '',
+                        subject: '',
+                    })
+                }
+                ,
+                () => setHasSent({ state: 'no' })
 
-//                 {/* left-part */}
-//                 <section className="left-part flex">
-//                     <span className={"text-secondary"}>ME CONTACTER</span>
-//                     <MixedText
-//                         firstPart={'Une '}
-//                         coloredPart={'idée'}
-//                         lastPart={' à rendre concrète ?'}
+            ).catch(() => setHasSent({ state: 'no' })
+            ).finally(() => setLoading(false))
 
-//                     />
-//                     <p>Parlons de votre prochain produit web ou mobile : architecture, interface, intégrations et livraison production.</p>
+        }
 
-
-//                     <div className="contact-item-wrapper">
-//                         <ContactLinkItem
-//                             icon={<BiLogoGmail/>}
-//                             title={'GMAIL'}
-//                             descript={CONTACT.GMAIL}
-//                             onClick={handleGmailClick}
-//                         />
-//                         <ContactLinkItem
-//                             icon={<IoIosCall/>}
-//                             title={"TEL"}
-//                             descript={CONTACT.TEL}
-//                             onClick={handleTelClick}
-//                         />
-//                         <ContactLinkItem
-//                             icon={<IoLogoLinkedin/>}
-//                             title={'LINKEDIN'}
-//                             descript={CONTACT.LINKEDIN}
-//                             onClick={handleLinkedinClick}
-//                         />
-//                         <ContactLinkItem
-//                             icon={<IoLogoGithub/>}
-//                             title={'GITHUB'}
-//                             descript={CONTACT.GITHUB}
-//                             onClick={handleGithubClick}
-//                         />
-//                         <ContactLinkItem
-//                             icon={<IoLocationSharp/>}
-//                             title={'LOCATION'}
-//                             descript={CONTACT.LOCATION}
-//                             // onClick={}
-//                         />
-//                     </div>
-//                 </section>
-
-//                 {/* form part */}
-//                 <section className="right-part">
-//                     <div className="flex-center">
-//                         <div className="text-side">
-//                             <span className={"text-primary"}>NOUVEL ECHANGE</span>
-//                             <h5>Décrivez votre besoin</h5>
-//                         </div>
-//                         <BsSend className={"text-primary"}/>
-//                     </div>
-//                     <form action="">
-//                         <div className="flex">
-//                             <InputForm label="Name" placeholder="Your name" />
-//                             <InputForm label="Email" placeholder="vous@entreprise.com" />
-//                         </div>
-//                         <InputForm label="Subject" placeholder="Application mobile, interface web, integration" />
-
-//                         <TextareaForm label="Message" placeholder="Context, enjeux, echeance" />
-
-//                         <PrimaryButton>Envoyer le message</PrimaryButton>
-//                         <p>L'envoi du message est en cours de developpement, je vous invite a me contacter via les moyens de communications fournis dans la partie "Mes contacts" en cliquant dessus.</p>
-//                     </form>
-//                 </section>
-//             </div>
-
-
-
-
-//         </MainLayout>
-//     )
-// }
-
-export default function Contact () {
-
-    const {tc} = useTranslate()
-
-    const handleGmailClick = () => {
-        window.open(`mailto:${CONTACT.GMAIL}`, '_blank');
-    };
-
-    const handleTelClick = () => {
-        window.open(`tel:${CONTACT.TEL}`, '_blank');
-    };
-
-    const handleLinkedinClick = () => {
-        window.open(CONTACT.LINKEDIN, '_blank');
-    };
-
-    const handleGithubClick = () => {
-        window.open(CONTACT.GITHUB, '_blank');
     };
 
     return (
@@ -162,34 +106,35 @@ export default function Contact () {
 
                     <div className="contact-item-wrapper">
                         <ContactLinkItem
-                            icon={<BiLogoGmail/>}
-                            title={tc("contact_gmail_title")}
-                            descript={CONTACT.GMAIL}
-                            onClick={handleGmailClick}
-                        />
-                        <ContactLinkItem
-                            icon={<IoIosCall/>}
-                            title={tc("contact_tel_title")}
-                            descript={CONTACT.TEL}
-                            onClick={handleTelClick}
-                        />
-                        <ContactLinkItem
-                            icon={<IoLogoLinkedin/>}
-                            title={tc("contact_linkedin_title")}
-                            descript={CONTACT.LINKEDIN}
-                            onClick={handleLinkedinClick}
-                        />
-                        <ContactLinkItem
-                            icon={<IoLogoGithub/>}
-                            title={tc("contact_github_title")}
-                            descript={CONTACT.GITHUB}
-                            onClick={handleGithubClick}
-                        />
-                        <ContactLinkItem
-                            icon={<IoLocationSharp/>}
+                            icon={<IoLocationSharp />}
                             title={tc("contact_location_title")}
                             descript={CONTACT.LOCATION}
                         />
+                        <ContactLinkItem
+                            icon={<BiLogoGmail />}
+                            title={tc("contact_gmail_title")}
+                            descript={CONTACT.GMAIL}
+                            onClick={() => openLink(`mailto:${CONTACT.GMAIL}`)}
+                        />
+                        <ContactLinkItem
+                            icon={<IoIosCall />}
+                            title={tc("contact_tel_title")}
+                            descript={CONTACT.TEL}
+                            onClick={() => openLink(`tel:${CONTACT.TEL}`)}
+                        />
+                        <ContactLinkItem
+                            icon={<IoLogoLinkedin />}
+                            title={tc("contact_linkedin_title")}
+                            descript={CONTACT.LINKEDIN}
+                            onClick={() => openLink(CONTACT.LINKEDIN)}
+                        />
+                        <ContactLinkItem
+                            icon={<IoLogoGithub />}
+                            title={tc("contact_github_title")}
+                            descript={CONTACT.GITHUB}
+                            onClick={() => openLink(CONTACT.GITHUB)}
+                        />
+
                     </div>
                 </section>
 
@@ -200,19 +145,66 @@ export default function Contact () {
                             <span className={"text-primary"}>{tc("contact_form_title")}</span>
                             <h5>{tc("contact_form_subtitle")}</h5>
                         </div>
-                        <BsSend className={"text-primary"}/>
+                        <BsSend className={"text-primary"} />
                     </div>
                     <form action="">
                         <div className="flex">
-                            <InputForm label={tc("contact_form_name_label")} placeholder={tc("contact_form_name_placeholder")} />
-                            <InputForm label={tc("contact_form_email_label")} placeholder={tc("contact_form_email_placeholder")} />
+                            <InputForm
+                                label={tc("contact_form_name_label")}
+                                placeholder={tc("contact_form_name_placeholder")}
+                                value={formData.name}
+                                error={errors.name}
+                                name="name"
+                                onChange={updateData}
+                            />
+                            <InputForm
+                                label={tc("contact_form_email_label")}
+                                placeholder={tc("contact_form_email_placeholder")}
+                                value={formData.email}
+                                name="email"
+                                onChange={updateData}
+                                error={errors.email}
+
+                            />
                         </div>
-                        <InputForm label={tc("contact_form_subject_label")} placeholder={tc("contact_form_subject_placeholder")} />
+                        <InputForm
+                            label={tc("contact_form_subject_label")}
+                            placeholder={tc("contact_form_subject_placeholder")}
+                            value={formData.subject}
+                            name="subject"
+                            onChange={updateData}
+                            error={errors.subject}
+                        />
 
-                        <TextareaForm label={tc("contact_form_message_label")} placeholder={tc("contact_form_message_placeholder")} />
+                        <TextareaForm
+                            label={tc("contact_form_message_label")}
+                            placeholder={tc("contact_form_message_placeholder")}
+                            name="message"
+                            value={formData.message}
+                            onChange={updateData}
+                            error={errors.message}
+                        />
 
-                        <PrimaryButton>{tc("contact_form_btn")}</PrimaryButton>
-                        <p>{tc("contact_form_note")}</p>
+                        <PrimaryButton
+                            onClick={sendEmail}
+                        >
+                            {
+                                loading ?
+                                    <BiLoaderCircle /> :
+                                    tc("contact_form_btn")
+                            }
+                        </PrimaryButton>
+                        {
+                            hasSent.state === 'yes' && (
+                                <p className="success">{tc("contact_form_success")}</p>
+                            )
+                        }
+                        {
+                            hasSent.state === 'no' && (
+                                <p className="error">{tc("contact_form_error")}</p>
+                            )
+                        }
+                        {/* <p>{tc("contact_form_note")}</p> */}
                     </form>
                 </section>
             </div>
@@ -221,8 +213,8 @@ export default function Contact () {
 }
 
 
-const ContactLinkItem = ({icon, title, descript, onClick}) => (
-    <Card 
+const ContactLinkItem = ({ icon, title, descript, onClick }) => (
+    <Card
         onClick={onClick}
         className="contact-link-item flex-center" primaryAnimation={false}
     >
@@ -237,16 +229,46 @@ const ContactLinkItem = ({icon, title, descript, onClick}) => (
 )
 
 
-const InputForm = ({label, placeholder}) => (
-    <div className="input-form">
-        <label>{label}</label>
-        <input type="text" placeholder={placeholder} />
-    </div>
-)
+const InputForm = ({ label, name, placeholder, value, onChange, error }) => {
 
-const TextareaForm = ({label, placeholder}) => (
-    <div className="textarea-form">
-        <label>{label}</label>
-        <textarea placeholder={placeholder} />
-    </div>
-)
+    //translation hook
+    const { tc } = useTranslate()
+    return (
+        <div className="input-form">
+            <label>{label}</label>
+            <input
+                type="text"
+                name={name}
+                placeholder={placeholder}
+                value={value}
+                onChange={onChange}
+            />
+            {
+                error &&
+                <p className="error">{tc(error)}</p>
+            }
+        </div>
+    )
+}
+
+const TextareaForm = ({ label, name, placeholder, value, onChange, error }) => {
+
+    //translation hook
+    const { tc } = useTranslate()
+
+    return (
+        <div className="textarea-form">
+            <label>{label}</label>
+            <textarea
+                name={name}
+                placeholder={placeholder}
+                value={value} onChange={onChange}
+            />
+            {
+                error &&
+                <p className="error">{tc(error)}</p>
+            }
+        </div>
+    )
+
+} 

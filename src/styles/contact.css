@@ -90,8 +90,20 @@ form textarea::placeholder
     font-size: var(--mini-gap);
 }
 
-form > p{
+form > p,
+form p.error,
+form p.success
+{
     line-height: 1.5;
+    font-size: var(--mini-gap);
+}
+
+form p.error{
+    color: var(--error);
+}
+
+form p.success{
+    color: var(--success);
 }
 
 .textarea-form textarea{

@@ -1,5 +1,5 @@
 // helpers
-const openLink = (link) => {
+export const openLink = (link) => {
     window.open(link, '_blank');
 }
 
