@@ -1,8 +1,5 @@
-// helpers
-export const openLink = (link) => {
-    window.open(link, '_blank');
-}
 
+import { openLink } from "./common";
 
 // open LCR
 export const LCR_IOS_LINK = 'https://apps.apple.com/fr/app/lcr/id6749589650'

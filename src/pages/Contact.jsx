@@ -13,10 +13,10 @@ import emailjs from "@emailjs/browser"
 import "@/styles/contact.css"
 import { MENU_ITEMS } from "@/constant/menuConstant";
 import { useTranslate } from "@/hooks/useTranslation";
-import { openLink } from "@/lib/projects";
 import { contactFormValidator } from "@/validators/contact";
 import { useState } from "react";
 import { PulseLoader } from "react-spinners";
+import { openGithub, openGmail, openLinkedin, openTel } from "@/lib/contact";
 
 const pkey = import.meta.env.VITE_EMAIL_PUBLIC_KEY
 const serviceId = import.meta.env.VITE_EMAIL_SERVICE_ID
@@ -114,25 +114,25 @@ export default function Contact() {
                             icon={<BiLogoGmail />}
                             title={tc("contact_gmail_title")}
                             descript={CONTACT.GMAIL}
-                            onClick={() => openLink(`mailto:${CONTACT.GMAIL}`)}
+                            onClick={openGmail}
                         />
                         <ContactLinkItem
                             icon={<IoIosCall />}
                             title={tc("contact_tel_title")}
                             descript={CONTACT.TEL}
-                            onClick={() => openLink(`tel:${CONTACT.TEL}`)}
+                            onClick={openTel}
                         />
                         <ContactLinkItem
                             icon={<IoLogoLinkedin />}
                             title={tc("contact_linkedin_title")}
                             descript={CONTACT.LINKEDIN}
-                            onClick={() => openLink(CONTACT.LINKEDIN)}
+                            onClick={openLinkedin}
                         />
                         <ContactLinkItem
                             icon={<IoLogoGithub />}
                             title={tc("contact_github_title")}
                             descript={CONTACT.GITHUB}
-                            onClick={() => openLink(CONTACT.GITHUB)}
+                            onClick={openGithub}
                         />
 
                     </div>
